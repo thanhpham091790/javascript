@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+   <!-- Javascript statement are commands to the browser -->
+   <h2>JavaScript Statements</h2>
+
+   <p>In HTML, JavaScript statements are executed by the browser.</p>
+
+   <p id="demo"></p>
+   <!-- Javascript code is a sequence of statement -->
+   <h2>JavaScript Statements</h2>
+
+   <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+   <p id="demo1"></p>
+   <!-- Javascript statements are separated with semicolon -->
+   <h2>JavaScript Statements</h2>
+
+   <p>JavaScript statements are separated by semicolons.</p>
+
+   <p id="demo2"></p>
+   <!-- Multiple statement on one line is allowed -->
+   <h2>JavaScript Statements</h2>
+
+   <p>Multiple statements on one line is allowed.</p>
+
+   <p id="demo3"></p>
+   <!-- Javascript statements can be grouped together in code blocks -->
+   <h2>JavaScript Statements</h2>
+
+   <p>JavaScript code blocks are written between { and }</p>
+
+   <button type="button" onclick="myFunction()">Click Me!</button>
+
+   <p id="demo4"></p>
+   <p id="demo5"></p>
+   <!-- You can break a code line after an operator or a comma -->
+   <h2>JavaScript Statements</h2>
+
+   <p>
+      The best place to break a code line is after an operator or a comma.
+   </p>
+
+   <p id="demo6"></p>
+   <script>
+      document.getElementById("demo6").innerHTML = 
+      "Hello Thanh";
+      function myFunction() {
+         document.getElementById("demo4").innerHTML = "Hello Dolly!";
+         document.getElementById("demo5").innerHTML = "How are you?";
+      }
+      var a, b, c;
+      a = 5; b = 6; c = a + b;
+      document.getElementById("demo3").innerHTML = c;
+
+      var a, b, c;
+      a = 5;
+      b = 6;
+      c = a + b;
+      document.getElementById("demo2").innerHTML = c;
+
+      var x, y, z;
+      x = 5;
+      y = 6;
+      z = x + y;
+      document.getElementById("demo1").innerHTML = "The value of z is : " + z + ".";
+      document.getElementById("demo").innerHTML = "Hello Dolly";
+   </script>
+</body>
+
+</html>
