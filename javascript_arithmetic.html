@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- The addition (+) operator -->
+   <h2>The + Operator</h2>
+
+   <p id="demo"></p>
+   <!-- The substraction (-) operator -->
+   <h2>The - Operator</h2>
+
+   <p id="demo1"></p>
+   <!-- The multiplication (*) operator -->
+   <h2>The * Operator</h2>
+
+   <p id="demo2"></p>
+   <!-- The divsion (/) operator -->
+   <h2>The / Operator</h2>
+
+   <p id="demo3"></p>
+   <!-- The modulus (%) operator -->
+   <h2>The % Operator</h2>
+
+   <p id="demo4"></p>
+   <!-- The increment (++) operator -->
+   <h2>JavaScript Operators</h2>
+
+   <p>In this example, y is incremented before it is assigned to x (pre-incremented).</p>
+
+   <p id="demo5"></p>
+   <p id="demo6"></p>
+   <!-- The decrement (--) operator -->
+   <h2>JavaScript Operators</h2>
+
+   <p>In this example, y is decremented before it is assigned to x (pre-decremented).</p>
+
+   <p id="demo7"></p>
+   <p id="demo8"></p>
+   <script>
+      var y = 5;
+      var x = --y;
+      document.getElementById("demo7").innerHTML = y;
+      document.getElementById("demo8").innerHTML = x;
+
+      var y = 5;
+      var x = ++y;
+      document.getElementById("demo5").innerHTML = y;
+      document.getElementById("demo6").innerHTML = x;
+
+      var x = 5;
+      var y = 2;
+      var z = x % y;
+      document.getElementById("demo4").innerHTML = z;
+
+      var x = 5;
+      var y = 2;
+      var z = x / y;
+      document.getElementById("demo3").innerHTML = z;
+
+      var x = 5;
+      var y = 2;
+      var z = x * y;
+      document.getElementById("demo2").innerHTML = z;
+
+      var x = 5;
+      var y = 2;
+      var z = x - y;
+      document.getElementById("demo1").innerHTML = z;
+
+      var x = 5;
+      var y = 2;
+      var z = x + y;
+      document.getElementById("demo").innerHTML = z;
+   </script>
+</body>
+
+</html>
