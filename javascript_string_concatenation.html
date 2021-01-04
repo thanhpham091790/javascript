@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Adding two strings together using the concatenating (+) operator -->
+   <h2>JavaScript Operators</h2>
+
+   <p>The + operator concatenates (adds) strings.</p>
+
+   <p id="demo"></p>
+   <!-- Adding two strings together with a space in the first string -->
+   <h2>JavaScript Operators</h2>
+
+   <p>The + operator concatenates (adds) strings.</p>
+
+   <p id="demo1"></p>
+   <!-- Adding two strings together using the += operator -->
+   <h2>JavaScript Operators</h2>
+
+   <p>The assignment operator += can concatenate strings.</p>
+
+   <p id="demo2"></p>
+   <!-- Adding strings and numbers -->
+   <h2>JavaScript Operators</h2>
+
+   <p>Adding a number and a string, returns a string.</p>
+
+   <p id="demo3"></p>
+   <script>
+      var x = 5 + 5;
+      var y = "5" + 5;
+      var z = "Hello" + 5;
+      document.getElementById("demo3").innerHTML = x + "<br>" + y + "<br>" + z;
+
+      txt1 = "What a very ";
+      txt1 += "nice day";
+      document.getElementById("demo").innerHTML = txt1;
+
+      var txt1 = "What a very ";
+      var txt2 = "nice day.";
+      document.getElementById("demo1").innerHTML = txt1 + txt2;
+
+      var txt1 = "What a very";
+      var txt2 = " nice day";
+      document.getElementById("demo2").innerHTML = txt1 + txt2;
+   </script>
+</body>
+
+</html>
