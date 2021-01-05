@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body onload="startTime()">
+   <!-- Use Date() to display today's date and time -->
+   <h2>JavaScript new Date()</h2>
+
+   <p id="demo"></p>
+   <!-- Use getFullYear() display the year -->
+   <h2>JavaScript getFullYear()</h2>
+
+   <p>The getFullYear() method returns the full year of a date:</p>
+
+   <p id="demo1"></p>
+   <!-- Use getTime() to calculate the number of milliseconds since 1970 -->
+   <h2>JavaScript getTime()</h2>
+
+   <p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+   <p>The getTime() function returns the number of milliseconds since then:</p>
+
+   <p id="demo2"></p>
+   <!-- Use setFullYear() to set a specific date -->
+   <h2>JavaScript setFullYear()</h2>
+
+   <p>The setFullYear() method sets the year of a date object:</p>
+
+   <p id="demo3"></p>
+   <!-- Use toUTCString() to convert today's date (according to UTC) to a string -->
+   <h2>JavaScript Date()</h2>
+
+   <p>The toUTCString() method converts a date to a UTC string (a date display standard):</p>
+
+   <p id="demo4"></p>
+   <!-- Use getDay() to display the weekday as a number -->
+   <h2>JavaScript getDay()</h2>
+
+   <p>The getDay() method returns the weekday as a number:</p>
+
+   <p id="demo5"></p>
+   <!-- Use getDay() and an array to display the weekday as a name -->
+   <h2>JavaScript getDay()</h2>
+
+   <p>The getDay() method returns the weekday as a number:</p>
+
+   <p>You can use an array to display the name of the weekday:</p>
+
+   <p id="demo6"></p>
+   <!-- Display a clock -->
+   <div id="txt"></div>
+   <script>
+      function startTime(){
+         var today = new Date();
+         var h = today.getHours();
+         var m = today.getMinutes();
+         var s = today.getSeconds();
+         m = checkTime(m);
+         s = checkTime(s);
+         document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+         var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i){
+         if(i<10){
+            i = "0" + i;
+         }
+         return i;
+      }
+
+      var d = new Date();
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      document.getElementById("demo6").innerHTML = days[d.getDay()];
+
+      var d = new Date();
+      document.getElementById("demo5").innerHTML = d.getDay();
+
+      var d = new Date();
+      document.getElementById("demo4").innerHTML = d.toUTCString();
+
+      var d = new Date();
+      d.setFullYear(2020);
+      document.getElementById("demo3").innerHTML = d;
+
+      var d = new Date();
+      document.getElementById("demo2").innerHTML = d.getTime();
+
+      var d = new Date();
+      document.getElementById("demo1").innerHTML = d.getFullYear();
+
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d;
+   </script>
+</body>
+
+</html>
