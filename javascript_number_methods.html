@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- The toString() method cover a number to a string -->
+   <h2>JavaScript Numbers</h2>
+   <p>The toString() method can output numbers from base 2 to 36:</p>
+   <p id="demo"></p>
+   <!-- The valueOf() method returns a number as a number -->
+   <h2>JavaScript Number Methods</h2>
+
+   <p>The valueOf() method returns a number as a number:</p>
+
+   <p id="demo1"></p>
+   <!-- The toExponential() returns a number with exponential notation -->
+   <h2>JavaScript Number Methods</h2>
+
+   <p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+
+   <p>An optional parameter defines the number of digits behind the decimal point.</p>
+
+   <p id="demo2"></p>
+   <!-- The toFixed() methoad rounds a number to a number of digits -->
+   <h2>JavaScript Number Methods</h2>
+
+   <p>The toFixed() method rounds a number to a given number of digits.</p>
+   <p>For working with money, toFixed(2) is perfect.</p>
+
+   <p id="demo3"></p>
+   <!-- The toPrecision() method a number written with a specified length -->
+   <h2>JavaScript Number Methods</h2>
+
+   <p>The toPrecision() method returns a string, with a number written with a specified length:</p>
+
+   <p id="demo4"></p>
+   <!-- The global method Number() convert variables to numbers -->
+   <h2>JavaScript Global Methods</h2>
+
+   <p>The Number() method converts variables to numbers:</p>
+
+   <p id="demo5"></p>
+   <!-- The global method Number() can even convert dates to numbers -->
+   <h2>JavaScript Global Methods</h2>
+
+   <p>The Number() method can convert a date to a number:</p>
+
+   <p id="demo6"></p>
+   <!-- The global method parseInt() converts strings to numbers -->
+   <h2>JavaScript Global Functions</h2>
+
+   <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+
+   <p id="demo7"></p>
+   <!-- The global method parseFloat() convert strings to numbers -->
+   <h2>JavaScript Global Methods</h2>
+
+   <p>The parseFloat() method converts strings to numbers:</p>
+
+   <p id="demo8"></p>
+   <!-- MAX_VALUE returns the largest possible number in Javascript -->
+   <h2>JavaScript Global Methods</h2>
+
+   <p>The parseFloat() method converts strings to numbers:</p>
+
+   <p id="demo9"></p>
+   <!-- MIN_VALUE returns the smallest possible number in Javascript -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>MIN_VALUE returns the smallest number possible in JavaScript.</p>
+
+   <p id="demo10"></p>
+   <!-- POSITIVE_INFINITY represents infinity -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>POSITIVE_INFINITY</p>
+
+   <p id="demo11"></p>
+   <!-- POSITIVE_INFINITY is returned on overflow -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>POSITIVE_INFINITY is returned on overflow:</p>
+
+   <p id="demo12"></p>
+   <!-- NEGATIVE_INFINITY is returned on overflow -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>NEGATIVE_INFINITY is returned on overflow:</p>
+
+   <p id="demo13"></p>
+   <!-- NEGATIVE_INFINITY represents infinity -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>NEGATIVE_INFINITY</p>
+
+   <p id="demo14"></p>
+   <!-- NaN represents "Not a Number" -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p id="demo15"></p>
+   <!-- Arithmetic performed on a string will result in NaN -->
+   <h2>JavaScript Numbers</h2>
+
+   <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+
+   <p id="demo16"></p>
+   <!-- Using a Number property on a variable will return undefined -->
+   <h2>JavaScript Number Object Properties</h2>
+
+   <p>Using a Number property on a variable, expression, or value, will return undefined:</p>
+
+   <p id="demo17"></p>
+
+   <script>
+      var x = 6;
+      document.getElementById("demo17").innerHTML = x.MAX_VALUE;
+
+      document.getElementById("demo16").innerHTML = 100 / "apple";
+
+      document.getElementById("demo15").innerHTML = Number.NaN;
+
+      var x = Number.NEGATIVE_INFINITY;
+      document.getElementById("demo14").innerHTML = x;
+
+      var x = -1 / 0;
+      document.getElementById("demo13").innerHTML = x;
+
+      var x = 1 / 0;
+      document.getElementById("demo12").innerHTML = x;
+
+      var x = Number.POSITIVE_INFINITY;
+      document.getElementById("demo11").innerHTML = x;
+
+      var x = Number.MIN_VALUE;
+      document.getElementById("demo10").innerHTML = x;
+
+      var x = Number.MAX_VALUE;
+      document.getElementById("demo9").innerHTML = x;
+
+      document.getElementById("demo8").innerHTML =
+         parseFloat("10") + "<br>" +
+         parseFloat("10.33") + "<br>" +
+         parseFloat("10 6") + "<br>" +
+         parseFloat("10 years") + "<br>" +
+         parseFloat("years 10");
+
+      document.getElementById("demo7").innerHTML =
+         parseInt("10") + "<br>" +
+         parseInt("10.33") + "<br>" +
+         parseInt("10 6") + "<br>" +
+         parseInt("10 years") + "<br>" +
+         parseInt("years 10");
+
+      var x = new Date("2017-09-30");
+      document.getElementById("demo6").innerHTML = Number(x);
+
+      document.getElementById("demo5").innerHTML =
+         Number(true) + "<br>" +
+         Number(false) + "<br>" +
+         Number("10") + "<br>" +
+         Number(" 10") + "<br>" +
+         Number("10 ") + "<br>" +
+         Number(" 10 ") + "<br>" +
+         Number("10.33") + "<br>" +
+         Number("10,33") + "<br>" +
+         Number("10 33") + "<br>" +
+         Number("John");
+
+      var x = 9.656;
+      document.getElementById("demo4").innerHTML =
+         x.toPrecision() + "<br>" +
+         x.toPrecision(2) + "<br>" +
+         x.toPrecision(4) + "<br>" +
+         x.toPrecision(6);
+
+      var x = 9.656;
+      document.getElementById("demo3").innerHTML =
+         x.toFixed(0) + "<br>" +
+         x.toFixed(2) + "<br>" +
+         x.toFixed(4) + "<br>" +
+         x.toFixed(6);
+
+      var x = 9.656;
+      document.getElementById("demo2").innerHTML =
+         x.toExponential() + "<br>" +
+         x.toExponential(2) + "<br>" +
+         x.toExponential(4) + "<br>" +
+         x.toExponential(6);
+
+      var x = 123;
+      document.getElementById("demo1").innerHTML =
+         x.valueOf() + "<br>" +
+         (123).valueOf() + "<br>" +
+         (100 + 23).valueOf();
+
+      var myNumber = 32;
+      document.getElementById("demo").innerHTML =
+         "32 = " + "<br>" +
+         "Decimal " + myNumber.toString(10) + "<br>" +
+         "Hexadecimal " + myNumber.toString(16) + "<br>" +
+         "Octal " + myNumber.toString(8) + "<br>" +
+         "Binary " + myNumber.toString(2);
+   </script>
+</body>
+
+</html>
