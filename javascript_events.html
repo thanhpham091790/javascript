@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- An onclick event changes an HTML element -->
+   <button onclick="document.getElementById('demo').innerHTML=Date()">This time is?</button>
+   <p id="demo"></p>
+   <!-- An onclick event change own element -->
+   <button onclick="this.innerHTML=Date()">This time is?</button>
+   <!-- An onclick event calls a function -->
+   <p>Click the button to display the date.</p>
+
+   <button onclick="displayDate()">The time is?</button>
+   <p id="demo1"></p>
+   <script>
+      function displayDate(){
+         document.getElementById("demo1").innerHTML = Date();
+      }
+   </script>
+</body>
+
+</html>
