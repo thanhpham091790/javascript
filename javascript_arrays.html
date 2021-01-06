@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Create an array I -->
+   <h2>JavaScript Arrays</h2>
+
+   <p id="demo"></p>
+   <!-- Create an array II -->
+   <h2>JavaScript Arrays</h2>
+
+   <p id="demo1"></p>
+   <!-- Access an array element -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+
+   <p id="demo2"></p>
+   <!-- Change an array element -->
+   <h2>JavaScript Array Methods</h2>
+
+   <p>Array elements are accessed using their index number:</p>
+
+   <p id="demo3"></p>
+   <p id="demo4"></p>
+   <!-- Access a full array -->
+   <h2>JavaScript Arrays</h2>
+
+   <p id="demo5"></p>
+   <!-- Find the length of an array -->
+   <h2>JavaScript Arrays</h2>
+   <p>The length property returns the length of an array.</p>
+
+   <p id="demo6"></p>
+   <!-- Loop through an array -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>The best way to loop through an array is using a standard for loop:</p>
+
+   <p id="demo7"></p>
+   <!-- Add an element to an array -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+   <button onclick="myFunction8()">Try it</button>
+
+   <p id="demo8"></p>
+   <!-- Add undefined "holes" to an array -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+
+   <p id="demo9"></p>
+   <!-- How to recognize an array I -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>The instanceof operator returns true when used on an array:</p>
+
+   <p id="demo10"></p>
+   <!-- How to recognize an array II -->
+   <h2>JavaScript Arrays</h2>
+
+   <p>The new ECMASCRIPT 5 method isArray returns true when used on an array:</p>
+
+   <p id="demo11"></p>
+   <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo11").innerHTML = Array.isArray(fruits);
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo10").innerHTML = fruits instanceof Array;
+
+      var fruits, text, fLen, i;
+      fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits[6] = "Lemon";
+      fLen = fruits.length;
+      text = "";
+      for (i = 0; i < fLen; i++) {
+         text += fruits[i] + "<br>";
+      }
+      document.getElementById("demo9").innerHTML = text;
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo8").innerHTML = fruits;
+      function myFunction8() {
+         fruits[fruits.length] = "Lemon";
+         document.getElementById("demo8").innerHTML = fruits;
+      }
+
+      var fruits, text, fLen, i;
+      fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fLen = fruits.length;
+
+      text = "<ul>";
+      for (i = 0; i < fLen; i++) {
+         text += "<li>" + fruits[i] + "</li>";
+      }
+      text += "</ul>";
+      document.getElementById("demo7").innerHTML = text;
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo6").innerHTML = fruits.length;
+
+      var cars = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo5").innerHTML = cars;
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo3").innerHTML = fruits;
+      fruits[0] = "Kiwi";
+      document.getElementById("demo4").innerHTML = fruits;
+
+      var cars = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo2").innerHTML = cars[0];
+
+      var cars = [
+         "Saab",
+         "Volvo",
+         "BMW"
+      ];
+      document.getElementById("demo1").innerHTML = cars;
+
+      var cars = ["Saab", "Volvo", "BMW"];
+      document.getElementById("demo").innerHTML = cars;
+   </script>
+</body>
+
+</html>
