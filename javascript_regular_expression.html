@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Search for an expression in a string -->
+   <h2>JavaScript Regular Expressions</h2>
+
+   <p>Search a string for "w3Schools", and display the position of the match:</p>
+
+   <p id="demo"></p>
+   <!-- Search for an expression and replace it -->
+   <h2>JavaScript Regular Expressions</h2>
+
+   <p>Replace "microsoft" with "W3Schools" in the paragraph below:</p>
+
+   <button onclick="myFunction1()">Try it</button>
+
+   <p id="demo1">Please visit Microsoft and Microsoft!</p>
+   <script>
+      function myFunction1(){
+         var str = document.getElementById("demo1").innerHTML;
+         var txt = str.replace(/microsof/i,"W3Schools");
+         document.getElementById("demo1").innerHTML = txt;
+      }
+
+      var str = "Visit W3Schools!";
+      var n = str.search(/w3Schools/i);
+      document.getElementById("demo").innerHTML = n;
+   </script>
+</body>
+
+</html>
