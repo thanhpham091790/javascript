@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- The try...catch statement -->
+   <h2>JavaScript Error Handling</h2>
+
+   <p>This example demonstrates how to use <b>catch</b> to diplay an error.</p>
+
+   <p id="demo"></p>
+   <!-- The try...catch statement with a confirm box -->
+   <h2>JavaScript Error Handling</h2>
+
+   <input type="button" value="View message" onclick="message()" />
+   <!-- The onerror event -->
+   <input type="button" value="View message 1" onclick="message1()" />
+   <script>
+      onerror = handleErr;
+      var txt = "";
+      function handleErr(msg,url,l){
+         txt += "There was an error on this page.\n\n";
+         txt += "Error: " + msg + "\n";
+         txt += "URL: " + url + "\n";
+         txt += "Line: " + l + "\n";
+         txt += "Click Ok to continue.\n\n";
+         alert(txt);
+         return true;
+      }
+      function message1(){
+         adddlert("Welcome guest!");
+      }
+
+      var txt = "";
+      function message(){
+         try{
+            adddlert("Welcome guest!");
+         }catch(err){
+            txt = "There was an error on this page.\n\n";
+            txt += "Click OK to continue viewing  this page, \n";
+            txt += "or Cancel to return to the home page.\n\n";
+            if(!confirm(txt)){
+               document.location.href = "https://www.w3schools.com/";
+            }
+         }
+      }
+
+      try {
+         adddlert("Welcome guest");
+      } catch (err) {
+         document.getElementById("demo").innerHTML = err.message;
+      }
+   </script>
+</body>
+
+</html>
