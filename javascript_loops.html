@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- For loop -->
+   <h2>JavaScript For Loop</h2>
+
+   <p id="demo"></p>
+   <!-- Looping an array -->
+   <h2>JavaScript For Loop</h2>
+
+   <p id="demo1"></p>
+   <!-- Looping through HTML headers -->
+   <h2>JavaScript For Loop</h2>
+
+   <p>Loop from 1 to 6, to make HTML headings.</p>
+
+   <div id="demo2"></div>
+   <!-- While loop -->
+   <h2>JavaScript While Loop</h2>
+
+   <p id="demo3"></p>
+   <!-- Do while loop -->
+   <h2>JavaScript Do/While Loop</h2>
+
+   <p id="demo4"></p>
+   <!-- Break loop -->
+   <h2>JavaScript Loops</h2>
+
+   <p>A loop with a <b>break</b> statement.</p>
+
+   <p id="demo5"></p>
+   <!-- Break and continue a loop -->
+   <h2>JavaScript Loops</h2>
+
+   <p>A loop with a <b>continue</b> statement.</p>
+
+   <p>A loop which will skip the step where i = 3.</p>
+
+   <p id="demo6"></p>
+   <!-- Use a for...in statement to loop through the elements of an object -->
+   <h2>JavaScript For/In Loop</h2>
+
+   <p>The for/in statement loops through the properties of an object.</p>
+
+   <p id="demo7"></p>
+   <script>
+      var txt = "";
+      var person = {fname:"Thanh",lname:"Pham",age:25};
+      var x;
+      for(x in person){
+         txt += person[x] + " ";
+      }
+      document.getElementById("demo7").innerHTML = txt;
+
+      var text = "";
+      var i;
+      for (i = 0; i < 10; i++) {
+         if (i === 3) { continue; }
+         text += "The number is " + i + "<br>";
+      }
+      document.getElementById("demo6").innerHTML = text;
+
+      var text = "";
+      var i;
+      for (i = 0; i < 10; i++) {
+         if (i === 3) { break; }
+         text += "The number is " + i + "<br>";
+      }
+      document.getElementById("demo5").innerHTML = text;
+
+      var text = "";
+      var i = 0;
+      do {
+         text += "<br> The number is " + i;
+         i++;
+      } while (i < 10);
+      document.getElementById("demo4").innerHTML = text;
+
+      var text = "";
+      var i = 0;
+      while (i < 10) {
+         text += "<br>The number is " + i;
+         i++;
+      }
+      document.getElementById("demo3").innerHTML = text;
+
+      var x = "", i;
+      for (i = 1; i <= 6; i++) {
+         x = x + "<h" + i + ">Heading " + i + "</h" + i + ">";
+      }
+      document.getElementById("demo2").innerHTML = x;
+
+      var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+      var text = "";
+      var i;
+      for (i = 0; i < cars.length; i++) {
+         text += cars[i] + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = text;
+
+      var text = "";
+      var i;
+      for (i = 0; i < 5; i++) {
+         text += "The number is " + i + "<br>";
+      }
+      document.getElementById('demo').innerHTML = text;
+   </script>
+</body>
+
+</html>
