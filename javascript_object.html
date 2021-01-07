@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Creating a Javascript variable -->
+   <h2>JavaScript Variables</h2>
+
+   <p id="demo"></p>
+   <!-- Creating a Javscript object -->
+   <p>Creating a JavaScript Object.</p>
+
+   <p id="demo1"></p>
+   <!-- Creating a Javascript object (single line) -->
+   <p>Creating a JavaScript Object.</p>
+
+   <p id="demo2"></p>
+   <!-- Creating a Javascript object (multiple lines) -->
+   <p>Creating a JavaScript Object.</p>
+
+   <p id="demo3"></p>
+   <!-- Creating a Javascript object using new -->
+   <p id="demo4"></p>
+   <!-- Creating a Javascript object using a constructor -->
+   <h2>JavaScript Object Constructors</h2>
+
+   <p id="demo5"></p>
+   <!-- Creating built-in Javascript objects -->
+   <p id="demo6"></p>
+   <!-- The best way to create Javascript variables -->
+   <p id="demo7"></p>
+   <!-- Javascript objects are mutable -->
+   <p>JavaScript objects are mutable.</p>
+   <p>Any changes to a copy of an object will also change the original.</p>
+
+   <p id="demo8"></p>
+
+   <script>
+      var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+      var x = person;
+      x.age = 10;
+      document.getElementById("demo8").innerHTML = 
+         person.firstName + " is " + person.age + " years old.";
+
+      var x1 = {};
+      var x2 = "";
+      var x3 = 0;
+      var x4 = false;
+      var x5 = [];
+      var x6 = /()/;
+      var x7 = function () { };
+      document.getElementById("demo7").innerHTML =
+         "x1: " + typeof x1 + "<br>" +
+         "x2: " + typeof x2 + "<br>" +
+         "x3: " + typeof x3 + "<br>" +
+         "x4: " + typeof x4 + "<br>" +
+         "x5: " + typeof x5 + "<br>" +
+         "x6: " + typeof x6 + "<br>" +
+         "x7: " + typeof x7 + "<br>";
+
+      var x1 = new Object();   // A new Object object
+      var x2 = new String();   // A new String object
+      var x3 = new Number();   // A new Number object
+      var x4 = new Boolean();  // A new Boolean object
+      var x5 = new Array();  // A new Array object
+      var x6 = new RegExp();   // A new RegExp object
+      var x7 = new Function(); // A new Function object
+      var x8 = new Date();   // A new Date object
+      document.getElementById("demo6").innerHTML =
+         "x1: " + typeof x1 + "<br>" +
+         "x2: " + typeof x2 + "<br>" +
+         "x3: " + typeof x3 + "<br>" +
+         "x4: " + typeof x4 + "<br>" +
+         "x5: " + typeof x5 + "<br>" +
+         "x6: " + typeof x6 + "<br>" +
+         "x7: " + typeof x7 + "<br>" +
+         "x8: " + typeof x8 + "<br>";
+
+      function Person(first, last, age, eye) {
+         this.firstName = first;
+         this.lastName = last;
+         this.age = age;
+         this.eyeColor = eye;
+      }
+      var myFather = new Person("Tam", "Pham", 50, "Black");
+      document.getElementById("demo5").innerHTML =
+         "My father is " + myFather.age + " years old.";
+
+      var person = new Object();
+      person.firstName = "Thanh";
+      person.lastName = "Pham";
+      person.age = 30;
+      person.eyeColor = "Black";
+      document.getElementById("demo4").innerHTML =
+         person.firstName + "is " + person.age + " years old.";
+
+      var person = {
+         firstName: "John",
+         lastName: "Doe",
+         age: 50,
+         eyeColor: "blue"
+      };
+
+      document.getElementById("demo3").innerHTML =
+         person.firstName + " is " + person.age + " years old.";
+
+      var person = { firstname: "Toan", lastname: "Pham", age: 27, eyeColor: "Black" };
+      document.getElementById("demo2").innerHTML = person.firstname + " " + person.lastname;
+
+      var person = {
+         firstname: "Thanh",
+         lastname: "Pham",
+         age: 30,
+         eyeColor: "Black"
+      };
+      document.getElementById("demo1").innerHTML = person.firstname + " " + person.lastname;
+
+      var person = "John Doe";
+      document.getElementById("demo").innerHTML = person;
+   </script>
+</body>
+
+</html>
