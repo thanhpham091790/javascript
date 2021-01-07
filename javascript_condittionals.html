@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- The if statement -->
+   <p>Display "Good day!" if the hour is less than 18:00:</p>
+
+   <p id="demo">Good Evening!</p>
+   <!-- The else statement -->
+   <p>Click the button to display a time-based greeting:</p>
+
+   <button onclick="myFunction1()">Try it</button>
+
+   <p id="demo1"></p>
+   <!-- The else if statement -->
+   <p>Click the button to display a time-based greeting:</p>
+
+   <button onclick="myFunction2()">Try it</button>
+
+   <p id="demo2"></p>
+   <!-- Random link -->
+   <p id="demo3"></p>
+   <!-- Switch statement -->
+   <p id="demo4"></p>
+   <script>
+      var day;
+      switch(new Date().getDay()){
+         case 0:
+            day = "Sunday";
+            break;
+         case 1:
+            day = "Monday";
+            break;
+         case 2:
+            day = "Tuesday";
+            break;
+         case 3:
+            day = "Wenesday";
+            break;
+         case 4:
+            day = "Thursday";
+            break;
+         case 5:
+            day = "Friday";
+            break;
+         case 6:
+            day = "Saturday";
+      }
+      document.getElementById("demo4").innerHTML = day;
+
+      if(Math.random() < 0.5){
+         text = "<a href='https://w3schools.com'>Visit W3Schools</a>";
+      }else{
+         text = "<a href='https://wwf.org'>Visit WWF</a>";
+      }
+      document.getElementById("demo3").innerHTML = text;
+
+      function myFunction2(){
+         var greeting;
+         var time = new Date().getHours();
+         if(time<10){
+            greeting = "Good morning";
+         }else if(time<20){
+            greeting = "Good day";
+         }else{
+            greeting = "Good evening";
+         }
+         document.getElementById("demo2").innerHTML = greeting;
+      }
+
+      function myFunction1() {
+         var hour = new Date().getHours();
+         var greeting;
+         if (hour < 18) {
+            greeting = "Good day";
+         } else {
+            greeting = "Good evening";
+         }
+         document.getElementById("demo1").innerHTML = greeting;
+      }
+
+      if (new Date().getHours() < 18) {
+         document.getElementById("demo").innerHTML = "Good Day!";
+      }
+   </script>
+</body>
+
+</html>
