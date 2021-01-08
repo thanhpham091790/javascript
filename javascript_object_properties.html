@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Accessing properties using .property -->
+   <h2>JavaScript Object Properties</h2>
+
+   <p>There are two different ways to access an object property:</p>
+   <p>You can use .property or ["property"].</p>
+
+   <p id="demo"></p>
+   <!-- Accessing properties using [property] -->
+   <h2>JavaScript Object Properties</h2>
+
+   <p>There are two different ways to access an object property:</p>
+   <p>You can use .property or ["property"].</p>
+
+   <p id="demo1"></p>
+   <!-- Accessing properties using for in -->
+   <h2>JavaScript Object Properties</h2>
+
+   <p id="demo2"></p>
+   <!-- Adding new properties to existing objects -->
+   <h2>JavaScript Object Properties</h2>
+
+   <p id="demo3"></p>
+   <!-- Deleting properties from objects -->
+   <h2>JavaScript Object Properties</h2>
+
+   <p>You can delete object properties.</p>
+
+   <p id="demo4"></p>
+   <script>
+       var person = {
+         firstname: "Thanh",
+         lastname: "Pham",
+         age: 50,
+         eyecolor: "Blue"
+      };
+      delete person.age;
+      document.getElementById("demo4").innerHTML = 
+         person.firstname + " is " + person.age + " years old.";
+
+      var person = {
+         firstname: "Thanh",
+         lastname: "Pham",
+         age: 50,
+         eyecolor: "Blue"
+      };
+      person.nationality = "English";
+      document.getElementById("demo3").innerHTML =
+         person.firstname + " is " + person.nationality + ".";
+
+      var txt = "";
+      var person = { fname: "Thanh", lname: "Pham", age: 25 };
+      var x;
+      for (x in person) {
+         txt += person[x] + " ";
+      }
+      document.getElementById("demo2").innerHTML = txt;
+
+      var person = {
+         firstname: "John",
+         lastname: "Doe",
+         age: 50,
+         eyecolor: "Blue"
+      };
+
+      document.getElementById("demo1").innerHTML = person["firstname"] + " is " + person["age"] + " years old.";
+
+      document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+   </script>
+</body>
+
+</html>
