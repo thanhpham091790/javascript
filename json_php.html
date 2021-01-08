@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Get JSON from a php file -->
+   <h2>Get data as JSON from a PHP file on the server.</h2>
+
+   <p id="demo"></p>
+   <!-- Get JSON array from php -->
+   <h2>Get data as JSON from a PHP file, and convert it into a JavaScript array.</h2>
+
+   <p id="demo1"></p>
+   <!-- Get JSON from a database -->
+   <h2>Get data as JSON from a PHP file on the server.</h2>
+
+   <p>The JSON received from the PHP file:</p>
+
+   <p id="demo2"></p>
+   
+   <script>
+      var obj, dbParam, xmlhttp;
+      obj = {"limmit":10};
+      dbParam = JSON.stringify(obj);
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function(){
+         if(this.readyState == 4 && this.status == 200){
+            document.getElementById("demo2").innerHTML = this.responseText;
+         }
+      }
+      xmlhttp.open("GET","json_demo_db.php?x=" + dbParam, true);
+      xmlhttp.send();
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("demo1").innerHTML = myObj[2];
+         }
+      }
+      xmlhttp.open("GET", "demo_file_array.php", true);
+      xmlhttp.send();
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            document.getElementById("demo").innerHTML = myObj.name;
+         }
+      }
+      xmlhttp.open("GET", "demo_file.php", true);
+      xmlhttp.send();
+   </script>
+</body>
+
+</html>
