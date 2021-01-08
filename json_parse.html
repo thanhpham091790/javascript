@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Use JSON parse -->
+   <h2>Create Object from JSON String</h2>
+
+   <p id="demo"></p>
+   <!-- Using JSON parse in an AJAX example -->
+   <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+   <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+   <p id="demo1"></p>
+   <!-- Using JSON parse on an array -->
+   <h2>Content as Array.</h2>
+   <p>Content written as an JSON array will be converted into a JavaScript array.</p>
+
+   <p id="demo2"></p>
+   <!-- Parsing dates -->
+   <h2>Convert a string into a date object.</h2>
+
+   <p id="demo3"></p>
+   <!-- Parsing dates using the reviver function -->
+   <h2>Convert a string into a date object.</h2>
+
+   <p id="demo4"></p>
+   <!-- Parsing functions -->
+   <h2>Convert a string into a function.</h2>
+
+   <p id="demo5"></p>
+
+   <script>
+      var text = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+      var obj = JSON.parse(text);
+      obj.age = eval("("+obj.age+")");
+      document.getElementById("demo5").innerHTML = obj.name + ", " + obj.age();
+
+      var text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      var obj = JSON.parse(text, function (key, value) {
+         if (key == "birth") {
+            return new Date(value);
+         } else {
+            return value;
+         }
+      });
+      document.getElementById("demo4").innerHTML = obj.name + ", " + obj.birth;
+
+      var text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      var obj = JSON.parse(text);
+      obj.birth = new Date(obj.birth);
+      document.getElementById("demo3").innerHTML = obj.name + ", " + obj.birth;
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            document.getElementById("demo2").innerHTML = myArr[0];
+         }
+      };
+      xmlhttp.open("GET", "json_demo_array.txt", true);
+      xmlhttp.send();
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("demo1").innerHTML = myObj.name;
+         }
+      };
+      xmlhttp.open("GET", "json_demo.txt", true);
+      xmlhttp.send();
+
+      var txt = '{"name":"John", "age":30, "city":"New York"}';
+      var obj = JSON.parse(txt);
+      document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+   </script>
+</body>
+
+</html>
