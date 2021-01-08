@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+   <!-- Accessing properties using .property -->
+   <p>Access a JSON object using dot notation:</p>
+
+   <p id="demo"></p>
+   <!-- Accessing properties using [property] -->
+   <p>Access a JSON object using bracket notation:</p>
+
+   <p id="demo1"></p>
+   <!-- Looping through properties -->
+   <p>How to loop through all properties in a JSON object.</p>
+
+   <p id="demo2"></p>
+   <!-- Looping through property values -->
+   <p>Use bracket notation to access the property values.</p>
+
+   <p id="demo3"></p>
+   <!-- Access nested JSON objects -->
+   <p>How to access nested JSON objects.</p>
+
+   <p id="demo4"></p>
+   <!-- Modify values using the dot natation -->
+   <p>How to modify values in a JSON object.</p>
+
+   <p id="demo5"></p>
+   <!-- Modify values using the bracket notation -->
+   <p>How to modify values in a JSON object using the bracket notation.</p>
+
+   <p id="demo6"></p>
+   <!-- Delete object properties -->
+   <p>How to delete properties of a JSON object.</p>
+
+   <p id="demo7"></p>
+   <script>
+      var myObj, i, x = "";
+      myObj = {
+         "name": "John",
+         "age": 30,
+         "cars": {
+            "car1": "Ford",
+            "car2": "BMW",
+            "car3": "Fiat"
+         }
+      };
+      delete myObj.cars.car2;
+      for(i in myObj.cars){
+         x += myObj.cars[i] + "<br>";
+      }
+      document.getElementById("demo7").innerHTML = x;
+
+      var myObj, i, x = "";
+      myObj = {
+         "name": "John",
+         "age": 30,
+         "cars": {
+            "car1": "Ford",
+            "car2": "BMW",
+            "car3": "Fiat"
+         }
+      };
+      myObj.cars["car2"] = "Mercedes";
+      for (i in myObj.cars) {
+         x += myObj.cars[i] + "<br>";
+      }
+      document.getElementById("demo6").innerHTML = x;
+
+      var myObj, i, x = "";
+      myObj = {
+         "name": "John",
+         "age": 30,
+         "cars": {
+            "car1": "Ford",
+            "car2": "BMW",
+            "car3": "Fiat"
+         }
+      };
+      myObj.cars.car2 = "Mercedes";
+      for (i in myObj.cars) {
+         x += myObj.cars[i] + "<br>";
+      }
+      document.getElementById("demo5").innerHTML = x;
+
+      var myObj = {
+         "name": "John",
+         "age": 30,
+         "cars": {
+            "car1": "Ford",
+            "car2": "BMW",
+            "car3": "Fiat"
+         }
+      };
+      document.getElementById("demo4").innerHTML += myObj.cars.car2 + "<br>";
+      document.getElementById("demo4").innerHTML += myObj.cars["car2"];
+
+      var myObj, x;
+      myObj = { "name": "Thanh", "age": 30, "car": null };
+      for (x in myObj) {
+         document.getElementById("demo3").innerHTML += myObj[x] + "<br>";
+      }
+
+      var myObj, x;
+      myObj = { "name": "John", "age": 30, "car": null };
+      for (x in myObj) {
+         document.getElementById("demo2").innerHTML += x + "<br>";
+      }
+
+      var myObj, x;
+      myObj = { "name": "Thanh", "age": 30, "car": null };
+      x = myObj["name"];
+      document.getElementById("demo1").innerHTML = x;
+
+      var myObj, x;
+      myObj = { "name": "Thanh", "age": 30, "car": null };
+      x = myObj.name;
+      document.getElementById("demo").innerHTML = x;
+   </script>
+</body>
+
+</html>
