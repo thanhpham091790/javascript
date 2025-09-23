@@ -15,3 +15,11 @@ const person2 = new Object({
     eyeColor: 'brown'
 });
 console.log(`${person2.firstName} is ${person2.age} years old.`);
+
+// Using fromEntries()
+const fruits = [
+    ['apple', 300],
+    ['pears', 900],
+    ['bananas', 500]
+];
+console.log(Object.fromEntries(fruits));
