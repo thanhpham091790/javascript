@@ -2,6 +2,10 @@
 const person = {
     fullName: function (age) {
         return age == undefined ? `${this.firstName} ${this.lastName}` : `${this.firstName} ${this.lastName} is ${age} years old.`;
+    },
+
+    greeting: function () {
+        return `Hello! My name is ${this.firstName} ${this.lastName}.`
     }
 };
 const person2 = {
@@ -25,3 +29,11 @@ const person4 = {
 }
 console.log(person.fullName.apply(person4));
 console.log(person.fullName.apply(person4, [26]));
+
+// Function blind method
+const person5 = {
+    firstName: 'Thuy',
+    lastName: 'Tran'
+}
+
+console.log(person.fullName.bind(person5)());
