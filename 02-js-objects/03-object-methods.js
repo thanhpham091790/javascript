@@ -14,3 +14,9 @@ person1.name = function () {
     return `My name is ${person1.firstName} ${person1.lastName}.`;
 }
 console.log(person1.name());
+
+// Using Javascript methods.
+person1.greeting = function () {
+    return `Hello, ${person1.name()}`.toLocaleUpperCase();
+}
+console.log(person1.greeting());
