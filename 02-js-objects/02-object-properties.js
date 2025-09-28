@@ -26,3 +26,17 @@ function Person1(first, last, age, eye) {
 const myFather = new Person1('Tam', 'Pham', 60, 'brown');
 const myMother = new Person1('Thao', 'Bui', 57, 'brown');
 console.log(`My father is ${myFather.nationality}. My mother is ${myMother.nationality}.`);
+
+// Deleting properties
+const person2 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    age: 50,
+    eyeColor: 'brown'
+}
+console.log(`${person2.firstName} is ${person2.age} years old.`);
+delete person2.age;
+console.log(`${person2.firstName} is ${person2.age} years old.`);
+delete person2['eyeColor'];
+console.log(`${person2.firstName}'s eye color is ${person2.eyeColor}`);
+
