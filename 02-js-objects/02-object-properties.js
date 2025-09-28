@@ -40,3 +40,19 @@ console.log(`${person2.firstName} is ${person2.age} years old.`);
 delete person2['eyeColor'];
 console.log(`${person2.firstName}'s eye color is ${person2.eyeColor}`);
 
+// Nested Objects
+const person3 = {
+    name: 'Thanh',
+    age: 30,
+    cars: {
+        car1: 'Ford',
+        car2: 'Toyota'
+    }
+}
+console.log(`${person3.name}'s second car is ${person3.cars.car2}.`);
+console.log(`${person3.name}'s second car is ${person3.cars['car2']}.`);
+console.log(`${person3.name}'s second car is ${person3['cars']['car2']}.`);
+const cars = 'cars';
+const car2 = 'car2';
+console.log(`${person3.name}'s second car is ${person3[cars][car2]}.`);
+
