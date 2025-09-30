@@ -20,3 +20,7 @@ function Person1(first, last, age, eye) {
 const myFather1 = new Person1('Tam', 'Pham', 60, 'brown');
 const myMother1 = new Person1('Thao', 'Bui', 57, 'brown');
 document.querySelector('#demo').innerHTML = `My father is ${myFather1.age} years old, and my mother is ${myMother1.age} years old.`;
+
+// Adding a property to an instant of object type.
+myFather1.car = 'Honda';
+document.querySelector('#demo').innerHTML = `My father car is ${myFather1.car}.`;
