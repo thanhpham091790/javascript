@@ -16,9 +16,16 @@ for (let x in person1) {
 }
 document.querySelector('#demo').innerHTML = text2;
 
-// Displaying the object using object.values()
+// Displaying the object using Object.values() method.
 const values = Object.values(person1);
 let text3 = values.toString();
 document.querySelector('#demo').innerHTML = text3;
+
+// Displaying the object using Object.entries() method.
+let text4 = '';
+for (let [key, value] of Object.entries(person1)) {
+    text4 += value + ' ';
+}
+document.querySelector('#demo').innerHTML = text4;
 
 // Displaying the object using JSON.stringify()
