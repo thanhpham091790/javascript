@@ -29,3 +29,5 @@ for (let [key, value] of Object.entries(person1)) {
 document.querySelector('#demo').innerHTML = text4;
 
 // Displaying the object using JSON.stringify()
+let text5 = JSON.stringify(person1);
+document.querySelector('#demo').innerHTML = text5;
