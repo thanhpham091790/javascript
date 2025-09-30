@@ -37,3 +37,21 @@ Person2.car = 'Honda';
 Person2.prototype.car = 'Honda';
 const myMother2 = new Person2('Thao', 'Bui', 57, 'brown');
 document.querySelector('#demo').innerHTML = `My mother car is ${myMother2.car}.`;
+
+// Constructor function method
+function Person3(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.fullName = function () {
+        return this.firstName + ' ' + this.lastName;
+    };
+}
+const myBrother3 = new Person3('Toan', 'Pham', 30, 'brown');
+myBrother3.ageName = function () {
+    return `${this.firstName}, ${this.age} years old.`;
+}
+const demo = document.querySelector('#demo');
+demo.innerHTML = `My brother full name is ${myBrother3.fullName()}`;
+demo.innerHTML = `My brother is ${myBrother3.ageName()}`;
