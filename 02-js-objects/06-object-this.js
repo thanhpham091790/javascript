@@ -9,3 +9,16 @@ const person1 = {
     }
 }
 demoEl.innerHTML = person1.fullName();
+// Explicit function binding
+const person2 = {
+    fullName: function () {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+const person3 = {
+    firstName: 'Thanh',
+    lastName: 'Pham'
+}
+
+demoEl.innerHTML = `Hello, my name is ${person2.fullName.call(person3)}`
