@@ -55,3 +55,13 @@ myBrother3.ageName = function () {
 const demo = document.querySelector('#demo');
 demo.innerHTML = `My brother full name is ${myBrother3.fullName()}`;
 demo.innerHTML = `My brother is ${myBrother3.ageName()}`;
+
+Person3.changeName = function () {
+    this.lastName = 'Tran';
+}
+Person3.prototype.changeName = function () {
+    this.lastName = 'Tran';
+}
+const myFather3 = new Person3('Tam', 'Pham', 60, 'brown');
+myFather3.changeName();
+demo.innerHTML = `My father new last name is ${myFather3.fullName()}`;
