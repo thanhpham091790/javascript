@@ -32,3 +32,8 @@ demoEl.innerHTML = `Hello Mr.${name}`;
 let name4 = 'W3Schools';
 let [c1, c2, c3, c4, c5] = name4;
 demoEl.innerHTML = `The first letter is ${c1}`;
+
+// Array destructuring
+const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+let [fruit1, fruit2] = fruits;
+demoEl.innerHTML = `I love ${fruit1}.`;
