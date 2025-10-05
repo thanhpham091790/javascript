@@ -42,3 +42,13 @@ demoEl.innerHTML = `I love ${fruit51}.`;
 const fruits6 = ["Bananas", "Oranges", "Apples", "Mangos"];
 let [fruits61, , , fruit62] = fruits6;
 demoEl.innerHTML = `I love ${fruit62}`;
+
+// Array position value
+const fruits7 = ["Bananas", "Oranges", "Apples", "Mangos"];
+let { [0]: fruit71, [2]: fruit73 } = fruits7;
+demoEl.innerHTML = `The first is: ${fruit71}, and the third is: ${fruit73}`;
+
+// The rest property
+const numbers = [10, 20, 30, 40, 50, 60, 70];
+const [num1, num2, ...rest] = numbers;
+demoEl.innerHTML = `${num1} ${num2}, and the rest is: ${rest}`;
