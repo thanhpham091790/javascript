@@ -27,3 +27,8 @@ const person3 = {
 };
 let { lastName3: name } = person3;
 demoEl.innerHTML = `Hello Mr.${name}`;
+
+// String destructuring
+let name4 = 'W3Schools';
+let [c1, c2, c3, c4, c5] = name4;
+demoEl.innerHTML = `The first letter is ${c1}`;
