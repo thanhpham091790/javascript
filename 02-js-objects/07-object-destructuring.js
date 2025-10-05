@@ -52,3 +52,16 @@ demoEl.innerHTML = `The first is: ${fruit71}, and the third is: ${fruit73}`;
 const numbers = [10, 20, 30, 40, 50, 60, 70];
 const [num1, num2, ...rest] = numbers;
 demoEl.innerHTML = `${num1} ${num2}, and the rest is: ${rest}`;
+
+// Destructuring Maps
+const fruits8 = new Map([
+    ['apple', 500],
+    ['banana', 300],
+    ['orange', 200]
+]);
+
+let text = '';
+for (const [key, value] of fruits8) {
+    text += key + ' is ' + value + '\n';
+}
+demoEl.innerHTML = text;
