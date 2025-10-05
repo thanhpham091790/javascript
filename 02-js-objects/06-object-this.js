@@ -21,4 +21,20 @@ const person3 = {
     lastName: 'Pham'
 }
 
-demoEl.innerHTML = `Hello, my name is ${person2.fullName.call(person3)}`
+demoEl.innerHTML = `Hello, my name is ${person2.fullName.call(person3)}`;
+// Function borrowing
+const person4 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    fullName: function () {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+const member = {
+    firstName: 'Ngan',
+    lastName: 'Do'
+}
+
+let fullName = person4.fullName.bind(member);
+demoEl.innerHTML = fullName();
