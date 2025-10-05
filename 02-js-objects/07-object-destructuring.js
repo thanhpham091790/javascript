@@ -17,3 +17,13 @@ const person2 = {
 };
 let { lastName2, firstName2, country2 = 'VN' } = person2;
 demoEl.innerHTML = `${firstName2} ${lastName2} is from ${country2}`;
+
+
+// Object property alias
+const person3 = {
+    firstName3: 'Toan',
+    lastName3: 'Pham',
+    age3: 30
+};
+let { lastName3: name } = person3;
+demoEl.innerHTML = `Hello Mr.${name}`;
