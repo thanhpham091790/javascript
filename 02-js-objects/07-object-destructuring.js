@@ -34,6 +34,11 @@ let [c1, c2, c3, c4, c5] = name4;
 demoEl.innerHTML = `The first letter is ${c1}`;
 
 // Array destructuring
-const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
-let [fruit1, fruit2] = fruits;
-demoEl.innerHTML = `I love ${fruit1}.`;
+const fruits5 = ["Bananas", "Oranges", "Apples", "Mangos"];
+let [fruit51, fruit52] = fruits5;
+demoEl.innerHTML = `I love ${fruit51}.`;
+
+// Skipping array values
+const fruits6 = ["Bananas", "Oranges", "Apples", "Mangos"];
+let [fruits61, , , fruit62] = fruits6;
+demoEl.innerHTML = `I love ${fruit62}`;
