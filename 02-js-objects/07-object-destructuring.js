@@ -65,3 +65,10 @@ for (const [key, value] of fruits8) {
     text += key + ' is ' + value + '\n';
 }
 demoEl.innerHTML = text;
+
+// Swapping javascript variables
+let firstName4 = 'Pham';
+let lastName4 = 'Thanh';
+
+[firstName4, lastName4] = [lastName4, firstName4];
+demoEl.innerHTML = firstName4 + ' ' + lastName4;
