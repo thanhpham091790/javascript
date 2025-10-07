@@ -74,3 +74,14 @@ const person7 = {
 };
 const keys7 = Object.keys(person7);
 console.log(keys7);
+
+// Javascript for in loop
+const person8 = {
+    fname: 'Thanh',
+    lname: 'Pham',
+    age: 35
+};
+
+for (let x8 in person8) {
+    console.log(typeof x8, x8, person8[x8]);
+}
