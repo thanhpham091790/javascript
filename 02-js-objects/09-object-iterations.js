@@ -38,3 +38,14 @@ const fruits4 = [
 ];
 const myObject4 = Object.fromEntries(fruits4);
 console.log(myObject4);
+
+// Javascript Object.values()
+const person5 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    age: 35,
+    eyeColor: 'brown'
+};
+
+let values5 = Object.values(person5);
+console.log(values5);
