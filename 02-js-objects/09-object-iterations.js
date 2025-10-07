@@ -49,3 +49,18 @@ const person5 = {
 
 let values5 = Object.values(person5);
 console.log(values5);
+
+// Javascript Object.groupBy()
+const fruits6 = [
+    { name: 'apples', quantity: 300 },
+    { name: 'bananas', quantity: 500 },
+    { name: 'oranges', quantity: 200 },
+    { name: 'kiwi', quantity: 150 }
+];
+
+function myCallback6({ quantity }) {
+    return quantity > 200 ? 'oke' : 'low';
+}
+
+const result6 = Object.groupBy(fruits6, myCallback6);
+console.log(result6);
