@@ -29,3 +29,12 @@ for (let [key, value] of Object.entries(person3)) {
 console.log(text3);
 const map3 = new Map(Object.entries(person3));
 console.log(map3);
+
+// Javasscript object.fromEntries()
+const fruits4 = [
+    ['apples', 300],
+    ['pears', 900],
+    ['bananas', 500]
+];
+const myObject4 = Object.fromEntries(fruits4);
+console.log(myObject4);
