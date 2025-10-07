@@ -22,8 +22,10 @@ const person3 = {
     age: 35,
     eyeColor: 'brown'
 };
-let text = '';
+let text3 = '';
 for (let [key, value] of Object.entries(person3)) {
-    text += key + ': ' + value + '\n';
+    text3 += key + ': ' + value + '\n';
 }
-console.log(text);
+console.log(text3);
+const map3 = new Map(Object.entries(person3));
+console.log(map3);
