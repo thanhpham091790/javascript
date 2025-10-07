@@ -64,3 +64,13 @@ function myCallback6({ quantity }) {
 
 const result6 = Object.groupBy(fruits6, myCallback6);
 console.log(result6);
+
+// Javascript Object.keys()
+const person7 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    age: 35,
+    eyeColor: 'brown'
+};
+const keys7 = Object.keys(person7);
+console.log(keys7);
