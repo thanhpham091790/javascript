@@ -17,3 +17,12 @@ const person2 = {
 };
 Object.defineProperty(person2, 'language', { value: 'EN' });
 console.log(person2);
+
+// List all object properties
+const person3 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'VN'
+};
+const properties = Object.getOwnPropertyNames(person3);
+console.log(properties);
