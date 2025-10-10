@@ -24,5 +24,16 @@ const person3 = {
     lastName: 'Pham',
     language: 'VN'
 };
-const properties = Object.getOwnPropertyNames(person3);
-console.log(properties);
+Object.defineProperty(person3, 'language', { enumerable: false });
+const properties3 = Object.getOwnPropertyNames(person3);
+console.log(properties3);
+
+// List enumerable object properties
+const person4 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'VN'
+};
+Object.defineProperty(person4, 'language', { enumerable: false });
+const properties4 = Object.keys(person4);
+console.log(properties4);
