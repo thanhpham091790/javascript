@@ -37,3 +37,16 @@ const person4 = {
 Object.defineProperty(person4, 'language', { enumerable: false });
 const properties4 = Object.keys(person4);
 console.log(properties4);
+
+// Adding getters and setters
+const person5 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'VN'
+};
+Object.defineProperty(person5, 'fullName', {
+    get: function () {
+        return this.firstName + ' ' + this.lastName;
+    }
+});
+console.log(person5.fullName);
