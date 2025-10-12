@@ -42,3 +42,17 @@ console.log(descriptors);
 // Object.getOwnPropertyNames() method.
 let propertyNames = Object.getOwnPropertyNames(person3);
 console.log(propertyNames);
+
+// Object.groupBy() method.
+const fruits3 = [
+    { name: "apples", quantity: 300 },
+    { name: "bananas", quantity: 500 },
+    { name: "oranges", quantity: 200 },
+    { name: "kiwi", quantity: 150 }
+];
+
+function myCallback({ quantity }) {
+    return quantity > 200 ? 'ok' : 'low';
+}
+const result3 = Object.groupBy(fruits3, myCallback);
+console.log(result3);
