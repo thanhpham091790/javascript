@@ -38,3 +38,7 @@ console.log(isPerson3Frozen);
 // Object.getOwnPropertyDescriptors() method.
 let descriptors = Object.getOwnPropertyDescriptors(person3);
 console.log(descriptors);
+
+// Object.getOwnPropertyNames() method.
+let propertyNames = Object.getOwnPropertyNames(person3);
+console.log(propertyNames);
