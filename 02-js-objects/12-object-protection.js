@@ -34,3 +34,7 @@ const person3 = {
 Object.freeze(person3)
 let isPerson3Frozen = Object.isFrozen(person3);
 console.log(isPerson3Frozen);
+
+// Object.getOwnPropertyDescriptors() method.
+let descriptors = Object.getOwnPropertyDescriptors(person3);
+console.log(descriptors);
