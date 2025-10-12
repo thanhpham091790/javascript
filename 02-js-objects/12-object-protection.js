@@ -16,7 +16,6 @@ console.log(isObjectExtensible, isArrayExtensible);
 // Javascript Object.seal() method.
 const person2 = { firstName: 'Thanh', lastName: 'Pham' };
 Object.seal(person2);
-delete person2.lastName;
 const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
 Object.seal(fruits2);
 
@@ -33,4 +32,5 @@ const person3 = {
     eyeColor: "blue"
 };
 Object.freeze(person3)
-person3.age = 51;
+let isPerson3Frozen = Object.isFrozen(person3);
+console.log(isPerson3Frozen);
