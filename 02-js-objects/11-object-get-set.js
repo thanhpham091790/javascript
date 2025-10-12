@@ -21,3 +21,14 @@ const person2 = {
 }
 person2.lang = 'vn';
 demoEl.innerHTML = person2.language;
+
+// Javascript function or getter
+const person3 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'en',
+    fullName: function () {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+demoEl.innerHTML = person3.fullName();
