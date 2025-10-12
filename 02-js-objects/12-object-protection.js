@@ -19,5 +19,9 @@ Object.seal(person2);
 delete person2.lastName;
 const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
 Object.seal(fruits2);
-fruits2.push('Kiwi');
+
+// Javascript Object.isSeal() method.
+let isPerson2Seal = Object.isSealed(person2);
+let isFruits2Seal = Object.isSealed(fruits2);
+console.log(isPerson2Seal, isFruits2Seal);
 
