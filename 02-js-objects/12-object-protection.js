@@ -1,4 +1,4 @@
-
+"use strict"
 const demoEl = document.querySelector('#demo');
 
 // Javascript Object.preventExtensions()
@@ -25,3 +25,12 @@ let isPerson2Seal = Object.isSealed(person2);
 let isFruits2Seal = Object.isSealed(fruits2);
 console.log(isPerson2Seal, isFruits2Seal);
 
+// Javascript Object.freeze() method
+const person3 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
+Object.freeze(person3)
+person3.age = 51;
