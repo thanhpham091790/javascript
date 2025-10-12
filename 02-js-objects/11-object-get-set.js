@@ -9,3 +9,15 @@ const person1 = {
     }
 }
 demoEl.innerHTML = person1.lang;
+
+// Javascript setter (the set keyword)
+const person2 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'en',
+    set lang(lang) {
+        this.language = lang;
+    }
+}
+person2.lang = 'vn';
+demoEl.innerHTML = person2.language;
