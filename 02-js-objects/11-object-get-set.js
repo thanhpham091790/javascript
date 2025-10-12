@@ -32,3 +32,13 @@ const person3 = {
     }
 }
 demoEl.innerHTML = person3.fullName();
+
+const person4 = {
+    firstName: 'Thanh',
+    lastName: 'Pham',
+    language: 'en',
+    get fullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+demoEl.innerHTML = person4.fullName;
