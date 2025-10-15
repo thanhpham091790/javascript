@@ -1,5 +1,5 @@
 // Class inheritance
-class Car {
+class Car1 {
     constructor(brand) {
         this.carname = brand;
     }
@@ -8,7 +8,7 @@ class Car {
     }
 }
 
-class Model extends Car {
+class Model1 extends Car1 {
     constructor(brand, mod) {
         super(brand);
         this.model = mod;
@@ -19,5 +19,24 @@ class Model extends Car {
     }
 }
 
-let myCar = new Model('Toyota', 'Camry');
+let myCar = new Model1('Toyota', 'Camry');
 console.log(myCar.show());
+
+// Getters and Setters
+class Car2 {
+    constructor(brand) {
+        this.carname = brand;
+    }
+    get cname() {
+        return this.carname;
+    }
+
+    set cname(name) {
+        this.carname = name;
+    }
+}
+
+const myCar2 = new Car2('Toyota');
+console.log(myCar2.cname);
+myCar2.cname = 'Lexus';
+console.log(myCar2.cname);
