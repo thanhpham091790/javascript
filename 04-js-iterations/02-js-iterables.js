@@ -15,3 +15,13 @@ const letters3 = new Set(['a', 'b', 'c']);
 for (const c3 of letters3) {
     console.log(c3);
 }
+
+// Iterating over a map
+const fruits = new Map([
+    ['apple', 500],
+    ['bananas', 300]
+]);
+
+for (const c4 of fruits) {
+    console.log(c4);
+}
