@@ -10,3 +10,21 @@ function myCalculator(num1, num2, callbacks) {
 }
 
 myCalculator(1, 3, myDisplayer);
+
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+const posNumbers = getPositiveNumbersFromArray(myNumbers, checkPosNumber);
+demoEl.innerHTML = posNumbers;
+
+function getPositiveNumbersFromArray(numberArray, callback) {
+    const posArray = [];
+    for (let num of numberArray) {
+        if (callback(num)) {
+            posArray.push(num);
+        }
+    }
+    return posArray;
+}
+
+function checkPosNumber(number) {
+    return number >= 0 ? true : false;
+}
