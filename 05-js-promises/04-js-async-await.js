@@ -19,3 +19,15 @@ async function myDisplay1() {
     demoEl.innerHTML = await myPromise1;
 }
 myDisplay1();
+
+async function myDisplay2() {
+    const myPromise2 = new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve('I love you too!');
+        }, 3000);
+    });
+
+    demoEl.innerHTML = await myPromise2;
+}
+
+myDisplay2();jav
