@@ -6,7 +6,5 @@ document.getElementById('demo').innerHTML =
     'The text in first paragraph (index 0) is: ' + elements.namedItem('para1').innerHTML +
     ' The text in second paragraph (index 1) is: ' + elements.namedItem('para2').innerHTML;
 
-for (let element of elements) {
-    console.log(element.innerHTML);
-}
-
+const elementArray = Array.from(elements);
+console.log(elementArray[0].innerHTML);
