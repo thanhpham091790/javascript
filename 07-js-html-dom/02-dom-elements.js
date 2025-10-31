@@ -1,8 +1,6 @@
-const elements = document.querySelectorAll('p.intro');
-console.log(elements);
-document.querySelector('#demo').innerHTML =
-    'The first paragraph with class="intro" is: ' + elements[0].innerHTML;
-elements.forEach(function (node, index) {
-    console.log(node, index);
-});
-console.log([...elements]);
+const form = document.forms['frm1'];
+let text = '';
+for (let i = 0; i < form.length; i++) {
+    text += form[i].value + '<br>';
+}
+document.querySelector('#demo').innerHTML = text;
