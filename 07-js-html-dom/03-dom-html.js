@@ -1,5 +1,5 @@
-
-// Changing the value of an attribute
-const image = document.querySelector('#image');
-image.src = 'https://www.w3schools.com/js/landscape.jpg';
-console.log(image);
+// Dynamic HTML content
+const demoEl = document.querySelector('#demo');
+setInterval(() => {
+    demoEl.innerHTML = Date();
+}, 1000);
