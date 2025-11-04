@@ -1,4 +1,13 @@
-const p2El = document.querySelector('#p2');
-p2El.style.color = 'blue';
-p2El.style.fontFamily = 'Arial';
-p2El.style.fontSize = '50px';
+const id1El = document.querySelector('#id1');
+const btnEl = document.querySelector('#btn');
+
+btnEl.addEventListener('click', () => {
+    id1El.style.color = randomColor();
+});
+
+function randomColor() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    return `rgb(${red},${green}, ${blue})`;
+}
