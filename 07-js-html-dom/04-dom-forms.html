@@ -11,13 +11,14 @@
 <body>
     <h2>JavaScript Validation</h2>
 
-    <p>Please input a number between 1 and 10:</p>
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" title="first name" required>
+        <input type="submit" value="Submit">
+    </form>
 
-    <input id="numb" title="numb" />
+    <p>If you click submit, without filling out the text field,
+        your browser will display an error message.</p>
 
-    <button type="button" id="submit">Submit</button>
-
-    <p id="demo"></p>
 </body>
 
 </html>
