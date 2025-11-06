@@ -1,11 +1,14 @@
-// Assign events using the HTML DOM
-const btn = document.querySelector('button');
+// Onload and unonload events
 const demoEl = document.querySelector('#demo');
-console.log(btn);
-btn.onclick = () => {
-    displayDate('Thanh')
-};
 
-function displayDate(name) {
-    demoEl.innerHTML = name + ' ' + Date();
+document.addEventListener('DOMContentLoaded', checkCookies);
+
+function checkCookies() {
+    let text = '';
+    if (navigator.cookieEnabled == true) {
+        text = 'Cookies are enabled.';
+    } else {
+        text = 'Cookies are not enabled.';
+    }
+    demoEl.innerHTML = text;
 }
