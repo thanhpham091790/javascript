@@ -1,13 +1,13 @@
-// The onmouseover and onmouseout event
+// The onmousedown and onmouseup event
 
-const divEl = document.querySelector('div');
+const divEl = document.querySelector('#demo');
 
-function mOver() {
-    console.log('mouse over!');
+function mDown() {
+    console.log('mouse down!');
     divEl.innerHTML = 'Thank you!';
 }
 
-function mOut() {
-    console.log('mouse out!');
-    divEl.innerHTML = 'Mouse over me!';
+function mUp() {
+    console.log('mouse up!');
+    divEl.innerHTML = 'Click me!';
 }
