@@ -1,5 +1,13 @@
-// oninput event
-const textInput = document.querySelector('input[type="text"]');
-function upperCase() {
-    textInput.value = textInput.value.toUpperCase();
+// The onmouseover and onmouseout event
+
+const divEl = document.querySelector('div');
+
+function mOver() {
+    console.log('mouse over!');
+    divEl.innerHTML = 'Thank you!';
+}
+
+function mOut() {
+    console.log('mouse out!');
+    divEl.innerHTML = 'Mouse over me!';
 }

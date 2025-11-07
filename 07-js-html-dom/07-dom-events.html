@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Events</title>
     <script src="./07-dom-events.js" defer></script>
+    <style>
+        #demo {
+            background-color: #D94A38;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>JavaScript HTML Events</h1>
-    <h2>The oninput Attribute</h2>
+    <h2>The onmouseover Attribute</h2>
 
-    Enter your name: <input aria-label="first name" type="text" id="fname" onchange="upperCase()">
-    <p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+    <div id="demo" onmouseover="mOver(this)" onmouseout="mOut(this)">
+        Mouse Over Me
+    </div>
 </body>
 
 </html>
