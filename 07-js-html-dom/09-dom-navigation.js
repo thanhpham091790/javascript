@@ -1,4 +1,3 @@
-// DOM Root Nodes
-
+// The nodeName property
 const demoEl = document.querySelector('#demo');
-demoEl.innerHTML = document.documentElement.innerHTML;
+demoEl.innerHTML = demoEl.nodeName;
