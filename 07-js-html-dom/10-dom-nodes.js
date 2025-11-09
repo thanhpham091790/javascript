@@ -1,4 +1,4 @@
-// Removing a child node
+// Replacing HTML elemnents.
 
 const div1 = document.querySelector('#div1');
 const p1 = document.querySelector('#p1');
@@ -8,5 +8,4 @@ const newPara = document.createElement('p');
 const textNode = document.createTextNode('This is a new paragraph!');
 newPara.appendChild(textNode);
 
-div1.insertBefore(newPara, p2);
-div1.removeChild(p2);
+div1.replaceChild(newPara, p1);
