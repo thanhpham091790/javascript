@@ -1,3 +1,4 @@
 // The nodeName property
 const demoEl = document.querySelector('#demo');
-demoEl.innerHTML = demoEl.nodeName;
+const idAttrNode = demoEl.getAttributeNode('id');
+demoEl.innerHTML = idAttrNode.nodeValue;
