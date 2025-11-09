@@ -1,13 +1,15 @@
 const myBtn = document.querySelector('#myBtn');
+const myDiv = document.querySelector('#myDiv');
 const demoEl = document.querySelector('#demo');
 
-let p1 = 5;
-let p2 = 7;
+myDiv.addEventListener('mouseover', mouseOverHandler);
 
-myBtn.addEventListener('click', () => {
-    myFunction(p1, p2);
-});
+function mouseOverHandler() {
+    demoEl.innerHTML = Math.random();
+}
 
-function myFunction(a, b) {
-    demoEl.innerHTML = a * b;
+myBtn.addEventListener('click', btnClickHandler);
+
+function btnClickHandler() {
+    myDiv.removeEventListener('mouseover', mouseOverHandler);
 }
