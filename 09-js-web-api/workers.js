@@ -1,0 +1,1 @@
+console.log('This is from workers.js file.');
