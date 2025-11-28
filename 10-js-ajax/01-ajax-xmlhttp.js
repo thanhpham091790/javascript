@@ -5,8 +5,10 @@ button.addEventListener('click', changeContent);
 
 function changeContent() {
     const xhttp = new XMLHttpRequest();
-    xhttp.addEventListener('load', () => {
-        demo.innerHTML = xhttp.responseText;
+    xhttp.addEventListener('readystatechange', () => {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            demo.innerHTML = xhttp.responseText;
+        }
     });
     xhttp.open('GET', 'ajax-info.txt');
     xhttp.send();
