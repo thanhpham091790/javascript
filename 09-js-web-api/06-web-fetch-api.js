@@ -1,5 +1,8 @@
 const demoEl = document.querySelector('#demo');
-let file = 'fetch_info.txt';
-fetch(file)
-    .then(x => x.text())
-    .then(y => demoEl.innerHTML = y);
+getText('fetch_info.txt');
+
+async function getText(file) {
+    let x = await fetch(file);
+    let y = await x.text();
+    demoEl.innerHTML = y
+}
