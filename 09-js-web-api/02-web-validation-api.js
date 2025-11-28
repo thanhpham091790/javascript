@@ -7,7 +7,9 @@ function myFunction() {
     const inputObject = document.querySelector('#id1');
     if (inputObject.validity.rangeOverflow) {
         demoEl.innerHTML = 'No more than 100.';
+    } else if (inputObject.validity.rangeUnderflow) {
+        demoEl.innerHTML = 'No less than 10.';
     } else {
-        demoEl.innerHTML = 'Input OK';
+        demoEl.innerHTML = 'Input oke.';
     }
 }
