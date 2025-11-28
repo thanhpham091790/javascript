@@ -18,9 +18,10 @@ function startWorker() {
     if (typeof (worker) == 'undefined') {
         worker = new Worker('workers.js');
     }
-    worker.onmessage = function (event) {
-        result.innerHTML = event.data;
-    }
+
+    worker.addEventListener('message', (event) => {
+        result.innerHTML = event.data
+    })
 }
 
 function stopWorker() {
