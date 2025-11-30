@@ -14,6 +14,7 @@ function sendGetRequest() {
 
 function readFile(xmlHttp) {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-        demo.innerHTML = xmlHttp.getAllResponseHeaders();
+        console.log(xmlHttp.getAllResponseHeaders());
+        demo.innerHTML = xmlHttp.getResponseHeader('last-modified');
     }
 }
