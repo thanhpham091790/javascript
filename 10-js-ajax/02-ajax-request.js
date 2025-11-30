@@ -8,7 +8,8 @@ function sendGetRequest() {
     xmlHttp.addEventListener('readystatechange', () => {
         readFile(xmlHttp);
     });
-    xmlHttp.open('GET', `ajax-info.txt?t=${Math.random()}`, true);
+    xmlHttp.open('POST', `ajax-info.txt`, true);
+    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlHttp.send();
 }
 
