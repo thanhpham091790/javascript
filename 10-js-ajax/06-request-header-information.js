@@ -11,5 +11,6 @@ function sendRequest() {
 }
 
 function getHeaderInfo(xhr) {
-    demo.innerHTML = xhr.getAllResponseHeaders();
+    console.log(xhr.getAllResponseHeaders());
+    demo.innerHTML = xhr.getResponseHeader('content-type');
 }
