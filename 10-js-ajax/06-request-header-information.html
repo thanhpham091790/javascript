@@ -6,27 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Header Information</title>
     <script src="./06-request-header-information.js" defer></script>
-    <style>
-        table,
-        tr,
-        th,
-        td {
-            border: 1px solid black;
-            text-align: left;
-        }
-
-        tr,
-        th,
-        td {
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <h2>The XMLHttpRequest Object</h2>
-    <p id="demo"></p>
-    <button type="button">Get Content</button>
+    <p>The getAllResponseHeaders() function returns all the header information of a resource, like length, server-type,
+        content-type, last-modified, etc:</p>
+
+    <pre id="demo"></pre>
+    <button type="button">Get All Response Header</button>
 </body>
 
 </html>
