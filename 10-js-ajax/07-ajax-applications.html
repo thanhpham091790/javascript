@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Applications</title>
+    <script src="./07-ajax-applications.js" defer></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tr {
+            border: 1px solid lightgray;
+            text-align: left;
+        }
+
+        tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        tr:hover {
+            cursor: pointer;
+        }
+
+        tr td:first-child,
+        tr th:first-child {
+            border-right: 1px solid lightgray;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Click on a CD to display album information.</p>
+    <button type="button">Load CD Collection</button>
+    <p id='detail'></p>
+    <table id="collection"></table>
+</body>
+
+</html>
