@@ -1,5 +1,11 @@
 const demo = document.querySelector('#demo');
-const myArray = ["John", "Peter", "Sally", "Jane"];
-const myJSON = JSON.stringify(myArray);
 
-demo.innerHTML = myJSON;
+// Storing data:
+const myObject = { name: "John", age: 31, city: "New York" };
+const myJSON = JSON.stringify(myObject);
+localStorage.setItem('myJSON', myJSON);
+
+// Retrieving data:
+const json = localStorage.getItem('myJSON');
+const object = JSON.parse(json);
+demo.innerHTML = `Hello, my name is ${object.name}`;
