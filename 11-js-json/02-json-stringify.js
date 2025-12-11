@@ -1,9 +1,5 @@
 const demo = document.querySelector('#demo');
-const myObj = {
-    name: 'Thanh',
-    age: 30,
-    city: 'Littleton'
-};
-const myJSON = JSON.stringify(myObj);
+const myArray = ["John", "Peter", "Sally", "Jane"];
+const myJSON = JSON.stringify(myArray);
 
 demo.innerHTML = myJSON;
