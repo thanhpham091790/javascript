@@ -11,13 +11,16 @@ if ($conn->connect_error) {
     $sql = 'SELECT name FROM ' . $dbParam->table . ' LIMIT 5';
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-        echo '<table><tr><th>Name</th></tr>';
+        $table = '<table><tr><th>Name</th></tr>';
         while ($row = $result->fetch_assoc()) {
-            echo '<tr><td>' . $row['name'] . '</td></tr>';
+            $table .= '<tr><td>' . $row['name'] . '</td></tr>';
         }
-        echo '</table>';
+        $table .= '</table>';
     } else {
-        echo '0 results.';
+        $table = '<table><tr><td>Name</td></tr><tr><td>0 results.</td></tr></table>';
     }
+    $json = json_encode($table);
+    echo $json;
+
     $conn->close();
 }

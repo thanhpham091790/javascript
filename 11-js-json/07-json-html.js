@@ -19,6 +19,7 @@ function sendRequest(event) {
 }
 
 function renderResponse(xhr) {
-    const response = xhr.response;
-    demo.innerHTML = response;
+    const response = xhr.responseText;
+    const obj = JSON.parse(response);
+    demo.innerHTML = obj;
 }
