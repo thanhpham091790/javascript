@@ -1,4 +1,14 @@
 const demo = document.querySelector('#demo');
+const button = document.querySelector('button');
+
+button.addEventListener('click', sendRequest);
+
+function sendRequest() {
+    let script = document.createElement('script');
+    script.setAttribute('src', '10_demo_jsonp.php');
+    document.body.appendChild(script);
+}
+
 function myFunc(obj) {
-    demo.innerHTML = `My name is ${obj.name}, ${obj.age} years old, and I live in ${obj.city} city.`;
+    demo.innerHTML = obj.name;
 }
