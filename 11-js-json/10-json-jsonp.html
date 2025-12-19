@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON JSONP</title>
     <script src="./10-json-jsonp.js" defer></script>
+    <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid lightblue;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Click the Button.</h2>
     <p>A script tag with a src attribute is created and placed in the document.</p>
-    <p>The PHP file returns a call to a function with the JSON object as a parameter.</p>
-
-    <button type="button">Click me!</button>
-
+    <p>The PHP file returns a call to a function with an object as a parameter.</p>
     <p id="demo"></p>
+
+    <p>Try changing the table property from "customers" to "products".</p>
 </body>
 
 </html>
