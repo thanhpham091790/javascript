@@ -1,8 +1,19 @@
 const demo = document.querySelector('#demo');
-const dbParam = JSON.stringify({ table: 'customers', limit: 10 });
-let script = document.createElement('script');
-script.setAttribute('src', `jsonp_demo_db.php?x=${dbParam}`);
-document.body.appendChild(script);
+const select = document.querySelector('select');
+
+select.addEventListener('change', (event) => {
+    requestData(event.target.value);
+});
+
+requestData();
+
+function requestData(table = 'customers') {
+    const dbParam = JSON.stringify({ table, limit: 10 });
+    let script = document.createElement('script');
+    script.setAttribute('src', `jsonp_demo_db.php?x=${dbParam}`);
+    document.body.appendChild(script);
+}
+
 
 function myFunc(arr) {
     let table = '<table><tr><th>Name</th></tr>';
