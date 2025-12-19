@@ -5,14 +5,15 @@ select.addEventListener('change', (event) => {
     requestData(event.target.value);
 });
 
-requestData();
 
 function requestData(table = 'customers') {
     const dbParam = JSON.stringify({ table, limit: 10 });
     let script = document.createElement('script');
-    script.setAttribute('src', `jsonp_demo_db.php?x=${dbParam}`);
+    script.setAttribute('src', `jsonp_demo_db.php?callback=myFunc&&x=${dbParam}`);
     document.body.appendChild(script);
 }
+
+requestData();
 
 
 function myFunc(arr) {
