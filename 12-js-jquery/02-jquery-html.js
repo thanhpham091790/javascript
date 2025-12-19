@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $('#01').text('Thanh Pham');
+    $('#demo').text(`The first paragraph text is: ${$('#01').text()}.`);
 });
