@@ -1,3 +1,4 @@
 $(document).ready(function () {
-    $('#demo').html('<p>Thanh Pham</p>');
+    $div01 = $('#01').html();
+    $('#demo').html(`<p>The content of the first div is:</p> ${$div01}`);
 });
