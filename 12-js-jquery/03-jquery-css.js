@@ -1,3 +1,6 @@
 $(document).ready(function () {
-    $('#02').show();
+    $('#demo').css({
+        'color': 'red',
+        'font-style': 'italic'
+    });
 });
