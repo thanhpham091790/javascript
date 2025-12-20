@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $('#02').hide();
+    $('#02').show();
 });
