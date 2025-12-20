@@ -1,12 +1,17 @@
-const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
-const yArray = [55, 49, 44, 24, 15];
+
+// Generate values
+const xValues = [];
+const yValues = [];
+for (let i = 0; i <= 10; i += 0.1) {
+    xValues.push(i);
+    yValues.push(Math.sin(i));
+}
 
 const data = [{
-    labels: xArray,
-    values: yArray,
-    type: 'pie',
-    hole: .33
+    x: xValues,
+    y: yValues,
+    mode: 'lines'
 }];
 
-const layout = { title: 'Wine Production' };
+const layout = { title: `y = Math.sin(x)` };
 Plotly.newPlot('myPlot', data, layout);
