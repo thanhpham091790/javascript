@@ -5,6 +5,7 @@ const data = [{
     labels: xArray,
     values: yArray,
     type: 'pie',
+    hole: .33
 }];
 
 const layout = { title: 'Wine Production' };
