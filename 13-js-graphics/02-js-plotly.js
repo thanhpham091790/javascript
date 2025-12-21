@@ -1,18 +1,29 @@
 
 // Generate values
-const xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
-const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
-
-const data = [{
-    x: xArray,
-    y: yArray,
-    mode: 'lines'
-}];
+const data = [
+    {
+        x: [1, 2, 3, 4],
+        y: [10, 20, 30, 40],
+        mode: 'markers',
+        marker: {
+            color: ['red', 'green', 'blue', 'orange'],
+            size: [20, 30, 40, 50]
+        }
+    },
+    {
+        x: [1, 2, 3, 4],
+        y: [15, 30, 45, 60],
+        mode: 'markers',
+        marker: {
+            color: 'rgb(31, 119, 180)',
+            size: 18,
+            symbol: ['circle', 'square', 'diamond', 'cross']
+        }
+    }
+];
 
 const layout = {
-    xaxis: { range: [40, 160], title: 'Square Meters' },
-    yaxis: { range: [5, 16], title: 'Price in Millions' },
-    title: 'House Prices vs Size'
+    title: 'Plotting Bubbles'
 };
 
 Plotly.newPlot('myPlot', data, layout);
