@@ -6,7 +6,7 @@ const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
 const data = [{
     x: xArray,
     y: yArray,
-    mode: 'markers'
+    mode: 'lines'
 }];
 
 const layout = {
