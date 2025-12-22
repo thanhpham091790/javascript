@@ -1,23 +1,20 @@
-const x = ["Italy", "France", "Spain", "USA", "Argentina"];
-const y = [55, 49, 44, 24, 15];
-const colors = ["rgba(0,0,255,1.0)",
-    "rgba(0,0,255,0.8)",
-    "rgba(0,0,255,0.6)",
-    "rgba(0,0,255,0.4)",
-    "rgba(0,0,255,0.2)",];
+const labels = ["Italy", "France", "Spain", "USA", "Argentina"];
+const data = [55, 49, 44, 24, 15];
+const colors = ["red", "green", "blue", "orange", "brown"];
 
 const ctx = document.querySelector('#myChart');
 
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: x,
+        labels,
         datasets: [{
             backgroundColor: colors,
-            data: y
+            data
         }]
     },
     options: {
+        indexAxis: 'y',
         plugins: {
             legend: { display: false },
             title: {
