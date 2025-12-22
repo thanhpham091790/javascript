@@ -1,46 +1,45 @@
 
 const ctx = document.querySelector('#myChart');
 
-const type = 'line';
+const xValues = [];
+const yValues = [];
 
-const labels = [];
-const data = [];
+generateData('Math.sin(x)', 0, 10, 0.5);
 
-for (let i = 0; i <= 10; i += 0.5) {
-    labels.push(i);
-    data.push(i * 2 + 7);
-}
-const datasets = [
-    {
-        fill: false,
-        pointRadius: 1,
-        borderColor: "rgba(255,0,0,0.5)",
-        data
+function generateData(func, i1, i2, step = 1) {
+    for (let x = i1; x <= i2; x += step) {
+        xValues.push(x);
+        yValues.push(eval(func));
     }
-];
-const legend = { display: false };
-const title = {
-    display: true,
-    text: 'y = x * 2 + 7',
-    font: { size: 16 }
-};
-
-const scales = {
-    x: { title: { display: true, text: 'x' } },
-    y: { title: { display: true, text: 'sin(x)' } }
 }
 
 new Chart(ctx, {
-    type,
+    type: 'line',
     data: {
-        labels,
-        datasets
+        labels: xValues,
+        datasets: [{
+            label: 'y = sin(x)',
+            data: yValues,
+            borderColor: 'rgba(0,0,255,0.5)',
+            pointRadius: 1,
+            tension: 0.4
+        }]
     },
     options: {
         plugins: {
-            legend,
-            title,
-            scales
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'y = sin(x)',
+                font: { size: 16 }
+            },
+        },
+        scales: {
+            x: { title: { display: true, text: 'x' } },
+            y: {
+                title: { display: true, text: 'sin(x)' }
+            }
         }
+
     }
 });
