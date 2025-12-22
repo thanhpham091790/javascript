@@ -18,7 +18,7 @@ const title = {
 };
 
 new Chart(ctx, {
-    type: 'pie',
+    type: 'doughnut',
     data: {
         labels,
         datasets: [{
