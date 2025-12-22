@@ -1,6 +1,6 @@
 const x = ["Italy", "France", "Spain", "USA", "Argentina"];
 const y = [55, 49, 44, 24, 15];
-const colors = ["red", "green", "blue", "orange", "brown"];
+const colors = ['salmon'];
 
 const ctx = document.querySelector('#myChart');
 
