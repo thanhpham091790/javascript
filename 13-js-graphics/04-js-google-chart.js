@@ -6,20 +6,20 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     // Set data
     const data = google.visualization.arrayToDataTable([
-        ['Country', 'Mhl'],
-        ['Italy', 55],
-        ['France', 49],
-        ['Spain', 44],
-        ['USA', 24],
-        ['Argentina', 15]
+        ['Price', 'Size'],
+        [50, 7], [60, 8], [70, 8], [80, 9], [90, 9],
+        [100, 9], [110, 10], [120, 11],
+        [130, 14], [140, 14], [150, 15]
     ]);
     // Set options
     const options = {
-        title: 'World Wide Wine Production.',
-        is3D: true
+        title: 'House Prices vs. Size',
+        hAxis: { title: 'Square Meters' },
+        vAxis: { title: 'Price in Millions' },
+        legend: 'none'
     }
 
     // Draw
-    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+    const chart = new google.visualization.LineChart(document.getElementById('myChart'));
     chart.draw(data, options);
 }
