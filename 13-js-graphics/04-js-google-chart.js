@@ -19,6 +19,6 @@ function drawChart() {
     }
 
     // Draw
-    const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
     chart.draw(data, options);
 }
