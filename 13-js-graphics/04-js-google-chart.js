@@ -20,6 +20,6 @@ function drawChart() {
     }
 
     // Draw
-    const chart = new google.visualization.LineChart(document.getElementById('myChart'));
+    const chart = new google.visualization.ScatterChart(document.getElementById('myChart'));
     chart.draw(data, options);
 }
