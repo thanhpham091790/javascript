@@ -15,7 +15,8 @@ function drawChart() {
     ]);
     // Set options
     const options = {
-        title: 'World Wide Wine Production.'
+        title: 'World Wide Wine Production.',
+        is3D: true
     }
 
     // Draw
