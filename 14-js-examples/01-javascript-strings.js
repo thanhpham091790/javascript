@@ -1,9 +1,6 @@
-const button = document.querySelector('button');
+
 const demo = document.querySelector('#demo');
 
-button.addEventListener('click', myFunc);
-
-function myFunc() {
-    let text = demo.innerHTML;
-    demo.innerHTML = text.replace("Microsoft", "W3Schools");
-}
+let text = "a,b,c,d,e,f";
+const arr = text.split(',');
+demo.innerHTML = arr[1];
