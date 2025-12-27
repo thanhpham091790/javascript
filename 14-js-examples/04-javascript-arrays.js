@@ -2,8 +2,10 @@ console.log('connected!');
 
 const demo = document.querySelector('#demo');
 
-const girls = ["Cecilie", "Lone"];
-const boys = ["Emil", "Tobias", "Linus"];
-const children = girls.concat(boys);
+const array1 = ["Cecilie", "Lone"];
+const array2 = ["Emil", "Tobias", "Linus"];
+const array3 = ["Robin", "Morgan"];
 
-demo.innerHTML = children;
+const array = array1.concat(array2, array3);
+
+demo.innerHTML = array;
