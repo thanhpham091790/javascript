@@ -3,8 +3,8 @@ const demo = document.querySelector('#demo');
 
 const numbers = [45, 4, 9, 19, 25];
 
-let sum = numbers.reduce(function (total, value) {
-    return total + value;
+let allOver18 = numbers.every(function (number) {
+    return number > 18;
 });
 
-demo.innerHTML = sum;
+demo.innerHTML = `All over 18 is ${allOver18}`;
