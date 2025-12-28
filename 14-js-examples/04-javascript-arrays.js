@@ -21,7 +21,15 @@ button.addEventListener('click', sortObjectByNumber);
 
 function sortObjectByNumber() {
     cars.sort(function (a, b) {
-        return a.year - b.year;
+        let x = a.type.toLocaleLowerCase();
+        let y = b.type.toLocaleLowerCase();
+        if (x < y) {
+            return -1;
+        }
+        if (x > y) {
+            return 1;
+        }
+        return 0;
     });
     displayCars();
 }
