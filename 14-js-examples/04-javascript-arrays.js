@@ -1,9 +1,9 @@
 
 const demo = document.querySelector('#demo');
 
-const numbers = [45, 4, 9, 16, 25];
-const numbers2 = numbers.map(function (number) {
-    return number * 2;
+const numbers = [45, 4, 9, 19, 25];
+const over18 = numbers.filter(function (value) {
+    return value > 18;
 });
 
-demo.innerHTML = numbers2;
+demo.innerHTML = over18;
