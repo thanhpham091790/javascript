@@ -1,11 +1,10 @@
 console.log('connected!');
 
-const demo = document.querySelector('#demo');
+const demo1 = document.querySelector('#demo1');
+const demo2 = document.querySelector('#demo2');
 
-const array1 = ["Cecilie", "Lone"];
-const array2 = ["Emil", "Tobias", "Linus"];
-const array3 = ["Robin", "Morgan"];
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+demo1.innerHTML = fruits;
 
-const array = array1.concat(array2, array3);
-
-demo.innerHTML = array;
+fruits.splice(2, 0, ['Lemon', 'Kiwi']);
+demo2.innerHTML = fruits;
