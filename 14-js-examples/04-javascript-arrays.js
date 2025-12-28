@@ -1,14 +1,27 @@
-console.log('connected!');
 
-const button = document.querySelector('button');
 const demo = document.querySelector('#demo');
+const button = document.querySelector('button');
 
-const points = [40, 100, 1, 5, 25, 10];
-demo.innerHTML = points;
+const cars = [
+    { type: "Volvo", year: 2016 },
+    { type: "Saab", year: 2001 },
+    { type: "BMW", year: 2010 }
+];
 
-button.addEventListener('click', randomOrder);
+displayCars();
 
-function randomOrder() {
-    points.sort(function () { return 0.5 - Math.random() });
-    demo.innerHTML = points;
+function displayCars() {
+    demo.innerHTML =
+        cars[0].type + ' ' + cars[0].year + '<br>' +
+        cars[1].type + ' ' + cars[1].year + '<br>' +
+        cars[2].type + ' ' + cars[2].year;
+}
+
+button.addEventListener('click', sortObjectByNumber);
+
+function sortObjectByNumber() {
+    cars.sort(function (a, b) {
+        return a.year - b.year;
+    });
+    displayCars();
 }
