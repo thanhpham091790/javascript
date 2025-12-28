@@ -2,9 +2,8 @@
 const demo = document.querySelector('#demo');
 
 const numbers = [45, 4, 9, 16, 25];
-let text = '';
-numbers.forEach(function (value) {
-    text += value + '<br>';
+const numbers2 = numbers.map(function (number) {
+    return number * 2;
 });
 
-demo.innerHTML = text;
+demo.innerHTML = numbers2;
