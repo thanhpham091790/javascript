@@ -1,10 +1,8 @@
 
 const demo = document.querySelector('#demo');
 
-const numbers = [45, 4, 9, 19, 25];
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
 
-let someOver18 = numbers.some(function (number) {
-    return number > 18;
-});
+let position = fruits.indexOf('Apple') + 1;
 
-demo.innerHTML = `All over 18 is ${someOver18}`;
+demo.innerHTML = `Apple is found in position ${position}.`;
