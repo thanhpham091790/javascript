@@ -1,9 +1,9 @@
 
 const demo = document.querySelector('#demo');
 
-const numbers = [4, 9, 16, 25, 29];
-let firstFound = numbers.find(function (value) {
+const numbers = [4, 19, 16, 25, 29];
+let firstIndex = numbers.findIndex(function (value) {
     return value > 18;
 });
 
-demo.innerHTML = `The first value over 18 is ${firstFound}.`;
+demo.innerHTML = `The position that value over 18 is ${firstIndex + 1}.`;
