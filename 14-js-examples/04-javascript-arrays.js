@@ -1,10 +1,14 @@
 console.log('connected!');
 
-const demo1 = document.querySelector('#demo1');
-const demo2 = document.querySelector('#demo2');
+const button = document.querySelector('button');
+const demo = document.querySelector('#demo');
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-demo1.innerHTML = fruits;
+const points = [40, 100, 1, 5, 25, 10];
+demo.innerHTML = points;
 
-fruits.splice(2, 0, ['Lemon', 'Kiwi']);
-demo2.innerHTML = fruits;
+button.addEventListener('click', randomOrder);
+
+function randomOrder() {
+    points.sort(function () { return 0.5 - Math.random() });
+    demo.innerHTML = points;
+}
