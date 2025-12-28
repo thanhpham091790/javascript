@@ -1,8 +1,9 @@
 
 const demo = document.querySelector('#demo');
 
-const fruits = ["Apple", "Orange", "Apple", "Mango"];
+const numbers = [4, 9, 16, 25, 29];
+let firstFound = numbers.find(function (value) {
+    return value > 18;
+});
 
-let position = fruits.lastIndexOf('Apple') + 1;
-
-demo.innerHTML = `Apple is found in position ${position}.`;
+demo.innerHTML = `The first value over 18 is ${firstFound}.`;
