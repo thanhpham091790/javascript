@@ -4,7 +4,7 @@ const submit = document.querySelector('#submitBtn');
 const reset = document.querySelector('#resetBtn');
 
 submit.addEventListener('click', function () {
-    console.log(form.length);
+    console.log(form.method);
 });
 
 reset.addEventListener('click', function () {
