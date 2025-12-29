@@ -5,7 +5,7 @@ const demo = document.querySelector('#demo');
 
 disable.addEventListener('click', disableHandler);
 enable.addEventListener('click', enableHandler);
-demo.innerHTML = mySelect.form.id;
+demo.innerHTML = mySelect.length;
 
 function disableHandler() {
     mySelect.disabled = true;
