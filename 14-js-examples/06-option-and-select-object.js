@@ -12,13 +12,18 @@ changeSize.addEventListener('click', changeSizeHandler);
 multiple.addEventListener('click', multipleHandler);
 selected.addEventListener('click', selectedHandler);
 all.addEventListener('click', allHandler);
+remove.addEventListener('click', removeHandler);
+
+function removeHandler() {
+    mySelect.remove(mySelect.selectedIndex);
+}
 
 function allHandler() {
     let options = '';
     for (let i = 0; i < mySelect.length; i++) {
         options += mySelect.options[i].text + ' ';
     }
-    demo.innerHTML = mySelect.selectedIndex;
+    demo.innerHTML = options;
 }
 
 function selectedHandler() {
