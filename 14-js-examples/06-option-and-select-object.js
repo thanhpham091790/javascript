@@ -18,7 +18,7 @@ function allHandler() {
     for (let i = 0; i < mySelect.length; i++) {
         options += mySelect.options[i].text + ' ';
     }
-    demo.innerHTML = options;
+    demo.innerHTML = mySelect.selectedIndex;
 }
 
 function selectedHandler() {
