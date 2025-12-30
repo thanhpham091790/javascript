@@ -11,6 +11,15 @@ enable.addEventListener('click', enableHandler);
 changeSize.addEventListener('click', changeSizeHandler);
 multiple.addEventListener('click', multipleHandler);
 selected.addEventListener('click', selectedHandler);
+all.addEventListener('click', allHandler);
+
+function allHandler() {
+    let options = '';
+    for (let i = 0; i < mySelect.length; i++) {
+        options += mySelect.options[i].text + ' ';
+    }
+    demo.innerHTML = options;
+}
 
 function selectedHandler() {
     demo.innerHTML = mySelect.options[mySelect.selectedIndex].value;
