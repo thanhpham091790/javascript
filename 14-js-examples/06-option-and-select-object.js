@@ -4,11 +4,18 @@ const mySelect = document.querySelector('#mySelect');
 const demo = document.querySelector('#demo');
 const changeSize = document.querySelector('#changeSize');
 const multiple = document.querySelector('#multiple');
+const selected = document.querySelector('#selected');
 
 disable.addEventListener('click', disableHandler);
 enable.addEventListener('click', enableHandler);
 changeSize.addEventListener('click', changeSizeHandler);
 multiple.addEventListener('click', multipleHandler);
+selected.addEventListener('click', selectedHandler);
+
+function selectedHandler() {
+    demo.innerHTML = mySelect.options[mySelect.selectedIndex].value;
+    console.log(mySelect);
+}
 
 function multipleHandler() {
     changeSizeHandler();
