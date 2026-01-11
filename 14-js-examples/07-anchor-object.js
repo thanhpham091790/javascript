@@ -1,3 +1,3 @@
 const link = document.querySelector('#myAnchor');
 
-console.log(link.target);
+console.log(link.type);
