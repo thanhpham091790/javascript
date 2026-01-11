@@ -1,3 +1,3 @@
 const link = document.querySelector('#myAnchor');
 
-console.log(link.id);
+console.log(link.rel);
