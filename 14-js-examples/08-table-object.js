@@ -1,8 +1,9 @@
 const myTable = document.querySelector('#myTable');
 const button = document.querySelector('button');
 
-button.addEventListener('click', changeBorder);
+button.addEventListener('click', changeBorderAndPadding);
 
-function changeBorder() {
+function changeBorderAndPadding() {
     myTable.style.border = '1px solid red';
+    myTable.style.padding = '15px';
 }
