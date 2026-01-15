@@ -2,9 +2,9 @@ const myTable = document.querySelector('#myTable');
 const button = document.querySelector('button');
 const demo = document.querySelector('#demo');
 
-button.addEventListener('click', displayFirstCell);
+button.addEventListener('click', createCaption);
 
-function displayFirstCell() {
+function createCaption() {
     console.log(myTable);
-    demo.innerHTML = myTable.rows[0].cells[0].innerHTML;
+    myTable.createCaption().innerHTML = 'Table Caption';
 }
