@@ -1,9 +1,10 @@
 const myTable = document.querySelector('#myTable');
 const button = document.querySelector('button');
+const demo = document.querySelector('#demo');
 
-button.addEventListener('click', changeBorderAndPadding);
+button.addEventListener('click', displayFirstCell);
 
-function changeBorderAndPadding() {
-    myTable.style.border = '1px solid red';
-    myTable.style.padding = '15px';
+function displayFirstCell() {
+    console.log(myTable);
+    demo.innerHTML = myTable.rows[0].cells[0].innerHTML;
 }
