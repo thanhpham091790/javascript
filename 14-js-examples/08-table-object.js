@@ -2,11 +2,8 @@ const myTable = document.querySelector('#myTable');
 const button = document.querySelector('button');
 const demo = document.querySelector('#demo');
 
-button.addEventListener('click', insertRow);
+button.addEventListener('click', () => changeContent(0, 0, 'Thanh Pham'));
 
-function insertRow() {
-    let row = myTable.insertRow(0);
-    let cell0 = row.insertCell(0);
-    let cell1 = row.insertCell(1);
-    cell0.innerHTML = cell1.innerHTML = 'New';
+function changeContent(row, cell, content) {
+    myTable.rows[row].cells[cell].innerHTML = content;
 }
