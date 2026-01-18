@@ -1,7 +1,7 @@
-const firstName = document.querySelector('#fname');
+const browsers = document.querySelector('#browsers');
 
-firstName.addEventListener('change', onChangeHandler);
+browsers.addEventListener('change', onChangeHandler);
 
-function onChangeHandler(event) {
-    event.target.value = event.target.value.toUpperCase();
+function onChangeHandler() {
+    console.log(browsers.options[browsers.selectedIndex].text);
 }
