@@ -1,7 +1,7 @@
-const browsers = document.querySelector('#browsers');
+const name = document.querySelector('#name');
 
-browsers.addEventListener('change', onChangeHandler);
+name.addEventListener('focus', onFocusHandler);
 
-function onChangeHandler() {
-    console.log(browsers.options[browsers.selectedIndex].text);
+function onFocusHandler(event) {
+    event.target.style.backgroundColor = 'yellow';
 }
