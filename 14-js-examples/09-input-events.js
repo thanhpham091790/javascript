@@ -1,9 +1,9 @@
 const form = document.forms[0];
-const fname = form.fname.value;
+const input = form[0];
+const reset = form[1];
 
-form.addEventListener('submit', onSubmitHandler);
+form.addEventListener('reset', onResetHandler);
 
-function onSubmitHandler(event) {
-    event.preventDefault();
-    console.log(fname);
+function onResetHandler() {
+    console.log('Your form is reseted.');
 }
