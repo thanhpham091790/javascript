@@ -1,9 +1,7 @@
-const form = document.forms[0];
-const input = form[0];
-const reset = form[1];
+const input = document.querySelector('input');
 
-form.addEventListener('reset', onResetHandler);
+input.addEventListener('keydown', onKeydownHandler);
 
-function onResetHandler() {
-    console.log('Your form is reseted.');
+function onKeydownHandler(event) {
+    console.log(`You are pressing: ${event.key} key.`);
 }
