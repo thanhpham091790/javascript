@@ -1,7 +1,15 @@
-const div = document.querySelector('div');
+const coordiv = document.querySelector('#coordiv');
+const demo = document.querySelector('#demo');
 
-div.addEventListener('mousedown', () => whichButton(event));
+coordiv.addEventListener('mousemove', () => onMouseMoveHandler(event));
+coordiv.addEventListener('mouseout', onMouseOutHandler);
 
-function whichButton(e) {
-    alert("You pressed button:  " + e.button);
+function onMouseMoveHandler(e) {
+    x = e.clientX;
+    y = e.clientY;
+    demo.innerHTML = `Coordinates: (${x}, ${y})`;
+}
+
+function onMouseOutHandler() {
+    demo.innerHTML = '';
 }

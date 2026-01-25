@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Events</title>
     <script src="./10-mouse-events.js" defer></script>
+    <style>
+        #coordiv {
+            width: 199px;
+            height: 99px;
+            border: 1px solid;
+        }
+    </style>
 </head>
 
 <body>
     <h1>JavaScript HTML Events</h1>
-    <h2>The onmousedown Attribute</h2>
+    <h2>The onmousemove and onmouseout Attributes</h2>
 
-    <div>Click this text (with one of your mouse-buttons)
-        <p>
-            0 Specifies the left mouse-button<br>
-            1 Specifies the middle mouse-button<br>
-            2 Specifies the right mouse-button</p>
-        <p><strong>Note:</strong> Internet Explorer 8, and earlier, returns another result:<br>
-            1 Specifies the left mouse-button<br>
-            4 Specifies the middle mouse-button<br>
-            2 Specifies the right mouse-button</p>
+    <div id="coordiv"></div>
 
-    </div>
+    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+
+    <p id="demo"></p>
+
 </body>
 
 </html>
