@@ -1,17 +1,7 @@
-const body = document.body;
+const div = document.querySelector('div');
 
-body.addEventListener('mousedown', () => whichElement(event));
+div.addEventListener('mousedown', () => whichButton(event));
 
-function whichElement(e) {
-    let targ, tname;
-    if (!e) {
-        e = window.event;
-    }
-    if (e.target) {
-        targ = e.target;
-    } else if (e.srcElement) {
-        targ = e.srcElement;
-    }
-    tname = targ.tagName;
-    alert("You clicked on a " + tname + " element.");
+function whichButton(e) {
+    alert("You pressed button:  " + e.button);
 }
