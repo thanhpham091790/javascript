@@ -1,7 +1,7 @@
 const input = document.querySelector('input');
 
-input.addEventListener('keydown', onKeydownHandler);
+input.addEventListener('keyup', onKeyupHandler);
 
-function onKeydownHandler(event) {
-    console.log(`You are pressing: ${event.key} key.`);
+function onKeyupHandler() {
+    input.value = input.value.toUpperCase();
 }
