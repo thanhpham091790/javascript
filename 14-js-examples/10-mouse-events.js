@@ -1,13 +1,13 @@
-const heading = document.querySelector('#heading');
+const p = document.querySelector('p');
 
-heading.addEventListener('mouseover', onMouseoverHandler);
-heading.addEventListener('mouseout', onMouseoutHandler);
+p.addEventListener('mousedown', onMousedownHandler);
+p.addEventListener('mouseup', onMouseupHandler);
 
 
-function onMouseoverHandler(event) {
+function onMousedownHandler(event) {
     event.target.style.color = 'red';
 }
 
-function onMouseoutHandler(event) {
+function onMouseupHandler(event) {
     event.target.style.color = 'green';
 }
