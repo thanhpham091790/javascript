@@ -1,7 +1,8 @@
-const input = document.querySelector('input');
+const input1 = document.forms[0][0];
+const input2 = document.forms[0][1];
 
-input.addEventListener('keyup', onKeyupHandler);
+input1.addEventListener('keyup', onKeyupHandler);
 
 function onKeyupHandler() {
-    input.value = input.value.toUpperCase();
+    input2.value = input1.value;
 }
