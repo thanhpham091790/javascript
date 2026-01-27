@@ -1,7 +1,8 @@
 
+const img = document.querySelector('img');
 
-window.addEventListener('load', onLoadHandler);
+img.addEventListener('load', onLoadHandler);
 
 function onLoadHandler() {
-    console.log('Page is loaded!');
+    console.log('Image is loaded!');
 }
