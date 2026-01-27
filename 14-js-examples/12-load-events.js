@@ -1,6 +1,9 @@
+const demo = document.querySelector('#demo');
+window.addEventListener('resize', onResizeHandler);
 
-window.addEventListener('unload', onUnloadHandler);
-
-function onUnloadHandler() {
-    console.log('Thank you for visiting!');
+function onResizeHandler() {
+    let w = window.outerWidth;
+    let h = window.outerHeight;
+    let txt = `Window size: width= ${w}, height= ${h}`;
+    demo.innerHTML = txt;
 }
