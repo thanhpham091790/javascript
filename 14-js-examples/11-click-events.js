@@ -4,5 +4,5 @@ const demo = document.querySelector('#demo');
 button.addEventListener('click', onClickHandler);
 
 function onClickHandler() {
-    demo.innerHTML = Date();
+    demo.innerHTML = 'Hello World!';
 }
