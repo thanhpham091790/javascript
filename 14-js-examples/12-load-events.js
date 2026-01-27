@@ -1,7 +1,8 @@
 const demo = document.querySelector('#demo');
+const para = document.querySelector('#para');
 
-document.addEventListener('keyup', () => whichButtonCode(event));
+para.addEventListener('mousedown', () => showCoords(event));
 
-function whichButtonCode(e) {
-    demo.innerHTML = e.keyCode;
+function showCoords(e) {
+    demo.innerHTML = `X = ${e.clientX}. Y = ${e.clientY}`;
 }
