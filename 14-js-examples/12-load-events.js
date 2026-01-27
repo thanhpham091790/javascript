@@ -1,8 +1,6 @@
 
-const img = document.querySelector('img');
+window.addEventListener('unload', onUnloadHandler);
 
-img.addEventListener('error', onErrorHandler);
-
-function onErrorHandler() {
-    console.log('Image could not be loaded!');
+function onUnloadHandler() {
+    console.log('Thank you for visiting!');
 }
