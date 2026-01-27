@@ -1,7 +1,7 @@
-const button = document.querySelector('button');
+const para = document.querySelector('#para');
 const demo = document.querySelector('#demo');
 
-button.addEventListener('click', onClickHandler);
+para.addEventListener('dblclick', onClickHandler);
 
 function onClickHandler() {
     demo.innerHTML = 'Hello World!';
