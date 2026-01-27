@@ -4,5 +4,5 @@ const para = document.querySelector('#para');
 para.addEventListener('mousedown', () => showCoords(event));
 
 function showCoords(e) {
-    demo.innerHTML = `X = ${e.clientX}. Y = ${e.clientY}`;
+    demo.innerHTML = `X = ${e.screenX}. Y = ${e.screenY}`;
 }
