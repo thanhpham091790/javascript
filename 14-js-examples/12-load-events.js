@@ -1,8 +1,8 @@
 
 const img = document.querySelector('img');
 
-img.addEventListener('load', onLoadHandler);
+img.addEventListener('error', onErrorHandler);
 
-function onLoadHandler() {
-    console.log('Image is loaded!');
+function onErrorHandler() {
+    console.log('Image could not be loaded!');
 }
