@@ -11,6 +11,6 @@ function openWinHandler() {
 }
 
 function resizeWinHandler() {
-    myWindow.resizeBy(50, 50);
+    myWindow.resizeTo(500, 500);
     myWindow.focus();
 }
