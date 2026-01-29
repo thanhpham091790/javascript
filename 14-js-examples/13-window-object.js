@@ -1,12 +1,20 @@
-const input = document.querySelector('input');
+const openWin = document.querySelector('#open');
+const blurWin = document.querySelector('#blur');
+const focusWin = document.querySelector('#focus');
+var myWindow;
 
-input.addEventListener('click', onClickHandler);
+openWin.addEventListener('click', openWinHandler);
+blurWin.addEventListener('click', blurWinHandler);
+focusWin.addEventListener('click', focusWinHandler);
 
-function onClickHandler() {
-    const windowFeatures = "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400";
-    const handle = window.open(
-        "https://www.woot.com/",
-        "_blank",
-        windowFeatures,
-    );
+function openWinHandler() {
+    myWindow = window.open('https://www.woot.com/', '_blank', 'width=400,height=400');
+    myWindow.blur();
 }
+function blurWinHandler() {
+    myWindow.blur();
+}
+function focusWinHandler() {
+    myWindow.focus();
+}
+
