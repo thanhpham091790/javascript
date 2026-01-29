@@ -1,15 +1,7 @@
-const openWin = document.querySelector('#openWin');
-const moveWin = document.querySelector('#moveWin');
-var myWindow;
+const input = document.querySelector('#printPage');
 
-openWin.addEventListener('click', openWinHandler);
-moveWin.addEventListener('click', moveWinHandler);
+input.addEventListener('click', printPage);
 
-function openWinHandler() {
-    myWindow = window.open('', '', 'width=400,height=400');
+function printPage() {
+    window.print();
 }
-
-function moveWinHandler() {
-    myWindow.moveBy(250, 250);
-}
-
