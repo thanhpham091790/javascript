@@ -3,10 +3,10 @@ const input = document.querySelector('input');
 input.addEventListener('click', onClickHandler);
 
 function onClickHandler() {
-    const windowFeatures = "left=200,top=200,width=640,height=640";
+    const windowFeatures = "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400";
     const handle = window.open(
         "https://www.woot.com/",
-        "mozillaWindow",
+        "_blank",
         windowFeatures,
     );
 }
