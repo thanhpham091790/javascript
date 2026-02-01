@@ -1,3 +1,3 @@
 const demo = document.querySelector('#demo');
 
-demo.innerHTML = window.location.href;
+demo.innerHTML = window.location.pathname;
