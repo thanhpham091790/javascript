@@ -1,3 +1,3 @@
-const demo = document.querySelector('#demo');
-
-demo.innerHTML = window.location.protocol;
+function newDoc() {
+    window.location.assign('https://www.w3schools.com');
+}
