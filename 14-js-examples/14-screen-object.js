@@ -1,3 +1,3 @@
 const demo = document.querySelector('#demo');
 
-demo.innerHTML = `Screen width is ${screen.width}`;
+demo.innerHTML = `Screen width is ${screen.height}`;
