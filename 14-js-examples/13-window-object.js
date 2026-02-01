@@ -3,5 +3,5 @@ const input = document.querySelector('#scroll');
 input.addEventListener('click', scrollHandler);
 
 function scrollHandler() {
-    window.scrollBy(0, 10);
+    window.scrollTo(0, 100);
 }
