@@ -1,16 +1,7 @@
-const openWin = document.querySelector('#openWin');
-const resizeWin = document.querySelector('#resizeWin');
-var myWindow;
+const input = document.querySelector('#scroll');
 
-openWin.addEventListener('click', openWinHandler);
-resizeWin.addEventListener('click', resizeWinHandler);
+input.addEventListener('click', scrollHandler);
 
-function openWinHandler() {
-    myWindow = window.open('', '', 'width=400,height=400');
-    myWindow.focus();
-}
-
-function resizeWinHandler() {
-    myWindow.resizeTo(500, 500);
-    myWindow.focus();
+function scrollHandler() {
+    window.scrollBy(0, 10);
 }
