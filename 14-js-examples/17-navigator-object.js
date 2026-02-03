@@ -1,3 +1,3 @@
 const demo = document.querySelector('#demo');
 
-demo.innerHTML = navigator.language;
+demo.innerHTML = navigator.javaEnabled();
