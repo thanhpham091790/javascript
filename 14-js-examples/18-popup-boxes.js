@@ -1,9 +1,10 @@
 function myFunction() {
-    var txt;
-    if (confirm('Press a button')) {
-        txt = 'You pressed OK!';
+    let txt;
+    let person = prompt('Please enter your name: ', 'Thanh Pham');
+    if (person == null || person == '') {
+        txt = 'User canceled the prompt.';
     } else {
-        txt = 'You pressed Cancel!';
+        txt = 'Hello ' + person + '! How are you today?';
     }
     document.querySelector('#demo').innerHTML = txt;
 }
