@@ -1,3 +1,3 @@
 function myFunction() {
-    alert('Pham Hong Thanh');
+    alert('Pham Hong Thanh\nHow are you?');
 }
